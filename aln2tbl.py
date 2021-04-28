@@ -24,8 +24,8 @@ t = ["A", "C", "D", "E", "F", "G", "H", "I", "K", "L1", "L2", "M", "N", "P", "Q"
 r = ["rrnL", "rrnS", "16S", "12S"]
 
 #Define control region (AT rich region) in mitochondrial genome
-#use CR1 and CR2 in mitochondrial genomes with two control regions
-n = ["CR", "control_region", "CR1", "CR2"]
+#use CR1 and CR2 in mitochondrial genomes with two control regions. You can add up to 10 control regions
+n = ["CR", "control_region", "CR1", "CR2","CR3", "CR4", "CR5", "CR6","CR7", "CR8","CR9"]
 
 #DEFINE DICTIONARY CORRESPONDENCE BETWEEN "GENE" : "PRODUCT"
 mydic = {
@@ -120,10 +120,6 @@ def get_args():
     print(">Features {}".format(title[0].id))
     
     return i, s, plus, fasta_sequences
-    
-    
-
-
 
 
 def process(i, s, plus, fasta_sequences):
@@ -182,9 +178,7 @@ def process(i, s, plus, fasta_sequences):
             elif seq_record.id not in c or t or r or n:
                 print("{}\t{}\tmisc_feature".format(str(pos), str(pos_trailing)))
                 print("\t\t\tnote\t{}".format(str(seq_record.id)))
-    
-    
-    
+
         #IF GENE IS NOT IN PLUS STRAND (e.i. not in positive strand, LIST -p) THEN MEANS THAT IS ENCODED ON THE NEGATIVE STRAND
         else:
             if seq_record.id in c: #Annotate protein coding cds in negative strand
@@ -226,15 +220,11 @@ def process(i, s, plus, fasta_sequences):
                 print("\t\t\tnote\tputative control region")
 
 
-
-
 def main():
-
     i, s, plus, fasta_sequences = get_args()
     
     process(i, s, plus, fasta_sequences)
-    
-    
+
 
 if __name__ == "__main__":
     main()
