@@ -50,34 +50,39 @@ def main():
     mitogenome = args.mitofile
     genes = args.genesfile
 
-    with open(genes, 'r+') as f:
-        # REMOVE EMPTY SPACES FROM FASTA HEADERS IN TEMPORARY FILES
-        with tempfile.NamedTemporaryFile(mode="w+", delete=True) as gclean:
-            txt = f.read().replace(' ', '')
-            gclean.write(txt)
-
-            if str(args.convertfile) == 'Y':
-                # CONVERT AND SANITIZE HEADER FASTA NAMES IN TEMPORARY FILES
-                with tempfile.NamedTemporaryFile(mode="w+",delete=True) as gconverted:
-                    for gene in SeqIO.parse(gclean.name, "fasta"):
-                        # SPLIT HEADER NAMES
-                        clean_name = str(gene.id).split(";")
-                        # SELECT 4TH FIELD
-                        new_name = clean_name[3]
-                        # SANITIZE NAME
-                        clean_new_name = re.sub("[\(\[].*?[\)\]]", "", new_name).replace("trn", "").replace("-", "_")
-                        gconverted.write(">" + clean_new_name + "\n" + str(gene.seq) + "\n")
-                    # EXECUTE PROCESS
-                    process(mitogenome,gconverted.name)
-
-            elif str(args.convertfile) == 'N':
-                # EXEXUTE PROCESS
-                process(mitogenome, gclean.name)
-
-            else:
-                print("ERROR: Type Y or N in --convertfile command")
-
+    f = open(genes, 'r')
+    # REMOVE EMPTY SPACES FROM FASTA HEADERS IN TEMPORARY FILES
+    gclean = tempfile.NamedTemporaryFile(mode="w+", delete=False)
+    txt = f.read().replace(' ', '')
+    gclean.write(txt)
+    gclean.close()
     f.close()
+
+    if str(args.convertfile) == 'Y':
+        # CONVERT AND SANITIZE HEADER FASTA NAMES IN TEMPORARY FILES
+        gconverted = tempfile.NamedTemporaryFile(mode="w+",delete=False)
+        for gene in SeqIO.parse(gclean.name, "fasta"):
+            # SPLIT HEADER NAMES
+            clean_name = str(gene.id).split(";")
+            # SELECT 4TH FIELD
+            new_name = clean_name[3]
+            # SANITIZE NAME
+            clean_new_name = re.sub("[\(\[].*?[\)\]]", "", new_name).replace("trn", "").replace("-", "_")
+            gconverted.write(">" + clean_new_name + "\n" + str(gene.seq) + "\n")
+        gconverted.close()
+        # EXECUTE PROCESS
+        process(mitogenome,gconverted.name)
+        os.remove(gconverted.name)
+
+    elif str(args.convertfile) == 'N':
+        # EXEXUTE PROCESS
+        process(mitogenome, gclean.name)
+
+    else:
+        print("ERROR: Type Y or N in --convertfile command")
+
+    os.remove(gclean.name)
+
 
 
 if __name__ == "__main__":
