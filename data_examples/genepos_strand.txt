@@ -1,1 +1,0 @@
-cox1,cox2,cox3,atp6,atp8,nad2,cob,nad6
