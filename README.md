@@ -71,38 +71,38 @@ The output file is saved as plain text with tbl extension to be readily identifi
 
 FAQs/FAQs/FAQs/:
 
-1)The script is apparently missing the correct python interpreter!
+1) The script is apparently missing the correct python interpreter!
 
 This script assumes the python3 interpreter to be in /usr/bin/env python3. If this is not the case, or multiple python
 installations are available, the full path to python3 interpreter can be added to the command line
 (e.g. ./usr/bin/python3 aln2tbl.py) or path exported in .bashrc file.
 
-2)How should individual genes be named in the input file?
+2) How should individual genes be named in the input file?
 Gene names must comply with the names proposed by Boore and Brown (2000) as in most recent GenBank annotations.
 
-		Protein coding gene names (CDS) are as follows: atp6, atp8, cob, cox1, cox2, cox3, nad1, nad2, nad3, nad4, nad4L, nad5 and nad6.
-		Accepted names for ribosomal genes are rrnL (or 16S) and rrnS (or 12S) for the large and small ribosomal subunit, respectively.
-		tRNAs are indicated using the single letter corresponding to the encoded tRNA (e.g. M for methionine).
-		The two tRNA genes that are generally present for Leucine and Serine must be differentiated by post-pending the correct
-		number to the gene name following the same convention used in MITOS: L1 for tRNALeu(CUN), L2 for tRNALeu(UUR), S1 for tRNASer(AGN) and S2 for tRNASer(UCN)).
-		The control region, if included, must be named 'control_region' or 'CR'. Up to two codon regions can be annotated ‘CR1’ and ‘CR2’
+Protein coding gene names (CDS) are as follows: atp6, atp8, cob, cox1, cox2, cox3, nad1, nad2, nad3, nad4, nad4L, nad5 and nad6.
+Accepted names for ribosomal genes are rrnL (or 16S) and rrnS (or 12S) for the large and small ribosomal subunit, respectively.
+tRNAs are indicated using the single letter corresponding to the encoded tRNA (e.g. M for methionine).
+The two tRNA genes that are generally present for Leucine and Serine must be differentiated by post-pending the correct
+number to the gene name following the same convention used in MITOS: L1 for tRNALeu(CUN), L2 for tRNALeu(UUR), S1 for tRNASer(AGN) and S2 for tRNASer(UCN)).
+The control region, if included, must be named 'control_region' or 'CR'. Up to two codon regions can be annotated ‘CR1’ and ‘CR2’
 
-3)Should all spacers be annotated as Control Regions?
+3) Should all spacers be annotated as Control Regions?
 No, do not annotate any non-coding region as a Control region. The Control region, just like PCGs, rRNAs and tRNAs, should be identified based on positive evidence (position, base composition, presence of specific conserved elements) prior to annotation. 
 
-4)Which start and stop codons are recognized as standard in each genetic code?
+4) Which start and stop codons are recognized as standard in each genetic code?
 
 According to NCBI standards, start and stop codons for different genetic codes for mitochondrial genomes are:
 
-   Vertebrate Mitochondrial Code (genetic_code=2):
+   Vertebrate Mitochondrial Code (genetic_code=2) :
        START CODONS for Met = ["ATT","ATC","ATA","ATG","GTG"]
        STOP CODONS = ["TAA","TAG","AGA","AGG"]
 
-   Yeast Mitochondrial Code (genetic_code=3):
+   Yeast Mitochondrial Code (genetic_code=3) :
        START CODONS for Met = ["ATA","ATG","GTG"]
        STOP CODONS = ["TAA","TAG"]
 
-    Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma (genetic_code=4) :
+    Mold, Protozoan, and Coelenterate Mitochondrial Code (genetic_code=4) :
        START CODONS for Met = ["TTA","TTG","CTG","ATT","ATC","ATA","ATG","GTG"]
        STOP CODONS  = ["TAA","TAG"]
 
@@ -114,7 +114,7 @@ According to NCBI standards, start and stop codons for different genetic codes f
        START CODONS for Met = ["ATG","GTG"]
        STOP CODONS  = ["TAA","TAG"]
 
-   Ascidian Mitochondrial Code (genetic_code=13):
+   Ascidian Mitochondrial Code (genetic_code=13) :
        START CODONS for Met = ["TTG","ATA","ATG","GTG"]
        STOP CODONS = ["TAA","TAG"]
 
@@ -134,16 +134,16 @@ with four semicolon separated fields to single name compatible with aln2tbl.py n
 In both options, the fasta contig can be the easily refined manually in a visual alignment editor such as SeaView or Aliview
 prior to further processing in aln2tbl.phy. 
 
-6)Is it possible to annotated a TA truncated stop codon?
+6) Is it possible to annotated a TA truncated stop codon?
 Both T and TA truncated stop codons are correctly processed by aln2tbl.py.
 Nevertheless the use of truncated TA stop codons is discouraged as this is not recognized by downstream application tbl2asn.
 A simple workaround is to indicate a T truncated stop codon in any case.
 
-7)Can the script handle partial genes?
+7) Can the script handle partial genes?
 No. The aln2tbl.py script can not handle partial genes, though this is an uncommon circumstance in mitogenomes.
 If present, the feature table must be manually corrected by adding the symbols < and > for partial 5’ and 3’ ends, respectively.
 
-8)Can the script handle duplicated tRNAs (apart from Leucine and Serine)?
+8) Can the script handle duplicated tRNAs (apart from Leucine and Serine)?
 No. The presence of duplicated tRNA genes, which is also uncommon, cannot be handled as it results in a duplicated gene name. 
 These must be manually annotated in the feature table.
 
