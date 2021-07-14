@@ -76,7 +76,7 @@ The output file is saved as plain text with tbl extension to be readily identifi
 
 # FAQs/FAQs/FAQs/:
 
-**1) The script is apparently missing the correct python interpreter!**
+**1) The script is apparently missing the correct python interpreter**
 
 This script assumes the python3 interpreter to be in /usr/bin/env python3. If this is not the case, or multiple python
 installations are available, the full path to python3 interpreter can be added to the command line
@@ -90,8 +90,8 @@ Protein coding gene names (CDS) are as follows: atp6, atp8, cob, cox1, cox2, cox
 Accepted names for ribosomal genes are rrnL (or 16S) and rrnS (or 12S) for the large and small ribosomal subunit, respectively.  
 tRNAs are indicated using the single letter corresponding to the encoded tRNA (e.g. M for methionine).  
 The two tRNA genes that are generally present for Leucine and Serine must be differentiated by post-pending the correct
-number to the gene name following the same convention used in MITOS: L1 for tRNALeu(CUN), L2 for tRNALeu(UUR), S1 for tRNASer(AGN) and S2 for tRNASer(UCN)).
-The control region, if included, must be named 'control_region' or 'CR'. Up to two codon regions can be annotated ‘CR1’ and ‘CR2’
+number to the gene name following the same convention used in MITOS: L1 for tRNALeu(CUN), L2 for tRNALeu(UUR), S1 for tRNASer(AGN) and S2 for tRNASer(UCN)). 
+The control region, if included, must be named 'control_region' or 'CR'. Up to two codon regions can be annotated ‘CR1’ and ‘CR2’.
 
 **3) Should all spacers be annotated as Control Regions?**
 
@@ -126,7 +126,7 @@ According to NCBI standards, start and stop codons for different genetic codes f
        STOP CODONS = ["TAA","TAG"]
 
 
-**5) How so I obtain the starting file (i.e. an assembly of individual genes mapped to the mitogenome sequence)?**
+**5) How should I obtain the starting file (i.e. an assembly of individual genes mapped to the mitogenome sequence)?**
 
 The initial fasta alignment of automatically annotated gene sequences against the complete mitogenome can be obtained
 in several ways starting from the results of an automatic annotation (e.g. MITOS2). One flexible option, using free software
@@ -135,12 +135,12 @@ by coordinate in picard tools (http://broadinstitute.github.io/picard), and fina
 python3 script sam2fasta.py (https://sourceforge.net/projects/sam2fasta/files/).
 
 Another option, provided that gene and genome sequences are position ordered, identical and ungapped (e.g. in the MITOS2 output),
-is to use the python v3 script mitos2aln.py, provided as companion to aln2tbl.phy. This script produces a fasta alignment of
+is to use the python 3 script mitos2aln.py, provided as companion to aln2tbl.phy. This script produces a fasta alignment of
 each gene nucleotide sequence relative to complete mitogenome sequence and parse mitos gene nomenclature of fasta headers
 with four semicolon separated fields to single name compatible with aln2tbl.py naming. 
 
 In both options, the fasta contig can be the easily refined manually in a visual alignment editor such as SeaView or Aliview
-prior to further processing in aln2tbl.phy. 
+prior to further processing in aln2tbl.py. 
 
 **6) Is it possible to annotated a TA truncated stop codon?**
 
@@ -153,6 +153,9 @@ A simple workaround is to indicate a T truncated stop codon in any case.
 No. The aln2tbl.py script can not handle partial genes, though this is an uncommon circumstance in mitogenomes.
 If present, the feature table must be manually corrected by adding the symbols < and > for partial 5’ and 3’ ends, respectively.
 
+See link for futher information 
+https://www.ncbi.nlm.nih.gov/genbank/genomesubmit_annotation/#partial_CDS
+
 **8) Can the script handle duplicated tRNAs (apart from Leucine and Serine)?**
 
 No. The presence of duplicated tRNA genes, which is also uncommon, cannot be handled as it results in a duplicated gene name. 
@@ -162,7 +165,7 @@ These must be manually annotated in the feature table.
 
 No. If the genome is circular, we foster the good practice of linearizing the sequence at the beginning of one gene, generally tRNA-I to circumvent the problem and produce a well organized submission. 
 
-**10) If the genome is incomplete and missing an inner portion of a single gene**
+**10) The genome is incomplete and missing an inner portion of a single gene**
 
 This occurrence must be manually annotated in the feature table.
 
@@ -174,7 +177,7 @@ This occurrence must be manually annotated in the feature table.
 mitos2fasta.py -m My_mitogenome_sequence.fas -g My_mitos2_genes.fas -c Y > My_assembly.fas
 ```
 
-Parameters:
+**PARAMETERS:**
 
 **-m MITOFILE --mitofile** -> Input file with Mitogenome sequence in fasta format, as submitted to MITOS2
 
@@ -182,16 +185,16 @@ Parameters:
 
 **-c CONVERTFILE, --convertfile** -> Gene names (fasta headers) from MITOS2 will be simplified and made compliant with aln2tbl. Yes=Y No=N
 
-Example:
+Example: 
 mitos2fasta.py -m Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g Hyalella_solida2319A_genes_manually_curated.fas -c Y > Hyalella_solida2319A_assembly.fas
 
-# Full pipeline example (example files in /mitogenomics-master/data_examples/)
+# Full pipeline example (example files in /mitogenomics/data_examples/)
 
 1) Send mitogenome sequence "/example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fasta" to MITOS2
 (http://mitos2.bioinf.uni-leipzig.de/index.py)
 
 	Select correct genetic code (Invertebrate for this example) and in advanced setting unselect OH, OL, and intron features.
-	Also unselect circular since this example is not a complete mitogenome since we failed to sequence part of control region. 
+	Also unselect circular since this example is not a complete mitogenome as we failed to sequence part of control region. 
 
 2) From MITOS2 output download fasta file sequences of annotated genes (FAS file link). Rename file to "./example/output/Hyalella_solida2319A_genes_mitos2_output.fas"
 
@@ -200,7 +203,7 @@ mitos2fasta.py -m Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g 
 ./mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/output/Hyalella_solida2319A_genes_mitos2_output.fas -c Y > ./example/output/Hyalella_solida2319A_assembly.fas
 ```
 
-4) If necessary (generally it is so) manually check and modify 5' and 3' ends of genes and add control regions in Seaview or AliView.
+4) If necessary (generally it is so) manually check and modify 5' and 3' ends of genes and add control regions in Seaview or AliView as we did manually.
 "./example/output/Hyalella_solida2319A_assembly_manually_curated.fas"
 
 5) build feature table file with aln2tbl python script
