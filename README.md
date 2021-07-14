@@ -96,8 +96,8 @@ No, do not annotate any non-coding region as a Control region. The Control regio
 According to NCBI standards, start and stop codons for different genetic codes for mitochondrial genomes are:
 
    Vertebrate Mitochondrial Code (genetic_code=2) :
-    START CODONS for Met = ["ATT","ATC","ATA","ATG","GTG"]
-    STOP CODONS = ["TAA","TAG","AGA","AGG"]
+	START CODONS for Met = ["ATT","ATC","ATA","ATG","GTG"]
+	STOP CODONS = ["TAA","TAG","AGA","AGG"]
 
    Yeast Mitochondrial Code (genetic_code=3) :
        START CODONS for Met = ["ATA","ATG","GTG"]
