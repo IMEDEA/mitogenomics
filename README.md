@@ -29,7 +29,7 @@ and other similar software.
 
 People wishing to contribute to the software, report issues or seek support can contact Joan Pons at jpons@imedea.uib-csic.es
 
-USAGE:
+**USAGE:**
 
 Simply copy the script to your executable path and use it as follows
 
