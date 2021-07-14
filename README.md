@@ -96,27 +96,27 @@ No, do not annotate any non-coding region as a Control region. The Control regio
 According to NCBI standards, start and stop codons for different genetic codes for mitochondrial genomes are:
 
    Vertebrate Mitochondrial Code (genetic_code=2) :  
-       START CODONS for Met = ["ATT","ATC","ATA","ATG","GTG"]
+       START CODONS for Met = ["ATT","ATC","ATA","ATG","GTG"]  
        STOP CODONS = ["TAA","TAG","AGA","AGG"]
 
-   Yeast Mitochondrial Code (genetic_code=3) :
-       START CODONS for Met = ["ATA","ATG","GTG"]
+   Yeast Mitochondrial Code (genetic_code=3) :  
+       START CODONS for Met = ["ATA","ATG","GTG"]  
        STOP CODONS = ["TAA","TAG"]
 
-   Mold, Protozoan, and Coelenterate Mitochondrial Code (genetic_code=4) :
-       START CODONS for Met = ["TTA","TTG","CTG","ATT","ATC","ATA","ATG","GTG"]
+   Mold, Protozoan, and Coelenterate Mitochondrial Code (genetic_code=4) :  
+       START CODONS for Met = ["TTA","TTG","CTG","ATT","ATC","ATA","ATG","GTG"]  
        STOP CODONS  = ["TAA","TAG"]
 
-   Invertebrate Mitochondrial Code (genetic_code=5) :
-       START CODONS for Met = ["TTG","ATT","ATC","ATA","ATG","GTG"]
+   Invertebrate Mitochondrial Code (genetic_code=5) :  
+       START CODONS for Met = ["TTG","ATT","ATC","ATA","ATG","GTG"]  
        STOP CODONS = ["TAA","TAG"]
 
-   Echinoderm and Flatworm Mitochondrial Code (genetic_code=9) :
-       START CODONS for Met = ["ATG","GTG"]
+   Echinoderm and Flatworm Mitochondrial Code (genetic_code=9) :  
+       START CODONS for Met = ["ATG","GTG"]  
        STOP CODONS  = ["TAA","TAG"]
 
-   Ascidian Mitochondrial Code (genetic_code=13) :
-       START CODONS for Met = ["TTG","ATA","ATG","GTG"]
+   Ascidian Mitochondrial Code (genetic_code=13) :  
+       START CODONS for Met = ["TTG","ATA","ATG","GTG"]  
        STOP CODONS = ["TAA","TAG"]
 
 
