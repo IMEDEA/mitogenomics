@@ -1,5 +1,6 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
+# This software is released under the license GNU GPLv3
 #title           :fastalg2tbl.py
 #description     :convert an assembly in fasta format into a feature table format
 #author          :J. PONS, J.J. Enseñat
@@ -44,19 +45,31 @@ r = ["rrnL","rrnS","16S","12S"]
 #use CR1 and CR2 in mitochondrial genomes with two control regions
 n = ["CR","control_region","CR1","CR2"]
 
-#Define starts and stop codons for different genetic codes
+#Define starts and stop codons for different genetic codes (https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
 if (args.table) == 2:
-	i = ["ATA","ATG"] #Vertebrate Mitochondrial Code (table=2) CANONICAL START CODONS
+	i = ["ATT","ATC","ATA","ATG","GTG"] #Vertebrate Mitochondrial Code (table=2) CANONICAL START CODONS
 	s = ["TAA","TAG","AGA","AGG"] #Vertebrate Mitochondrial Code (table=2) CANONICAL STOP CODONS
 
-elif (args.table) == 4 or (args.table) == 9:
-	i = ["ATG"] #Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma (table=4) and Echinoderm and Flatworm Mitochondrial Code (table=9) CANONICAL START CODONS
+elif (args.table) == 3:
+	i = ["ATA","ATG","GTG"] #Yeast (table=3) Mitochondrial Code CANONICAL START CODONS
+	s = ["TAA","TAG"] #Yeast (table=3) Mitochondrial Code CANONICAL STOP CODONS
+
+elif (args.table) == 4:
+	i = ["TTA","TTG","CTG","ATT","ATC","ATA","ATG","GTG"] #Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma (table=4) and Echinoderm and Flatworm Mitochondrial Code (table=9) CANONICAL START CODONS
 	s = ["TAA","TAG"] #Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma (table=4) and Echinoderm and Flatworm Mitochondrial Code (table=9) CANONICAL STOP CODONS 
 
-elif (args.table) == 3 or (args.table) == 5 or (args.table) == 13:
-	i = ["ATA","ATG"] #Yeast (table=3), Invertebrate (table=5), and Ascidian (table=13) Mitochondrial Code CANONICAL START CODONS
+elif (args.table) == 5:
+	i = ["TTG","ATT","ATC","ATA","ATG","GTG"] #Invertebrate (table=5) Mitochondrial Code CANONICAL START CODONS
+	s = ["TAA","TAG"] #Invertebrate (table=5) Mitochondrial Code CANONICAL STOP CODONS
+
+elif (args.table) == 9:
+	i = ["ATG","GTG"] #Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma (table=4) and Echinoderm and Flatworm Mitochondrial Code (table=9) CANONICAL START CODONS
+	s = ["TAA","TAG"] #Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma (table=4) and Echinoderm and Flatworm Mitochondrial Code (table=9) CANONICAL STOP CODONS 
+
+elif (args.table) == 13:
+	i = ["TTG","ATA","ATG","GTG"] #Yeast (table=3), Invertebrate (table=5), and Ascidian (table=13) Mitochondrial Code CANONICAL START CODONS
 	s = ["TAA","TAG"] #Yeast (table=3), Invertebrate (table=5), and Ascidian (table=13) Mitochondrial Code CANONICAL STOP CODONS
-	
+
 else:
 	print "ERROR: Genetic Code Table",str(args.table),"not implemented"
 	sys.exit(0)
@@ -158,11 +171,11 @@ for seq_record in fasta_sequences:
 			if length%3 == 1 and str(seq_record.seq[pos_trailing - 1]) == "T": #If stop codon is truncated and composed of a simple base e.g. (T)
 #				print "truncated stop codon",str(seq_record.seq[position_trailing])
 				print "\t\t\ttransl_except"+"\t(pos:"+str(pos_trailing)+",aa:TERM)"
-				print "\t\t\tnote"+"\t"+"TAA stop codon is completed by the addition of 3' A residues to the mRNA"
+				#print "\t\t\tnote"+"\t"+"TAA stop codon is completed by the addition of 3' A residues to the mRNA"
 			elif length%3 == 2 and str(seq_record.seq[pos_trailing - 2:pos_trailing]) == "TA": #If stop codon truncated but composed of two bases e.g. (TA)
 #				print "truncated stop codon",str(seq_record.seq[position_trailing-1:position_trailing+1])
 				print "\t\t\ttransl_except"+"\t(pos:"+str(pos_trailing - 1)+".."+str(pos_trailing)+",aa:TERM)"
-				print "\t\t\tnote"+"\t"+"TAA stop codon is completed by the addition of 3' A residues to the mRNA"
+				#print "\t\t\tnote"+"\t"+"TAA stop codon is completed by the addition of 3' A residues to the mRNA"
 			elif length%3 == 0 and str(seq_record.seq[pos_trailing-3:pos_trailing]) in s:
 				pass
 #				print "stop is canonical", str(seq_record.seq[position_trailing-2:position_trailing+1])

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# This software is released under the license GNU GPLv3
 
 import sys
 import argparse
@@ -25,7 +26,7 @@ r = ["rrnL", "rrnS", "16S", "12S"]
 
 #Define control region (AT rich region) in mitochondrial genome
 #use CR1 and CR2 in mitochondrial genomes with two control regions. You can add up to 10 control regions
-n = ["CR", "control_region", "CR1", "CR2","CR3", "CR4", "CR5", "CR6","CR7", "CR8","CR9"]
+n = ["CR", "control_region", "CR1", "CR2"]
 
 #DEFINE DICTIONARY CORRESPONDENCE BETWEEN "GENE" : "PRODUCT"
 mydic = {
@@ -76,26 +77,40 @@ mydic = {
 
 
 def get_args():
-    parser = argparse.ArgumentParser(prog = "aln2tbl.py", usage = "aln2tbl.py -f infile.fasta -g genesfile.txt -t 5 > outfile.tbl", description = "Description: convert an assembly in fasta format into a feature table format")
-    parser.add_argument("-f", "--fasta", required = True, help = "Input file with assembly in fasta format")
-    parser.add_argument("-g", "--genes", required = True, help = "Genes encoded in positive strand: file with gene names in a single line and separated by commas")
-    parser.add_argument("-t", "--table", type = int, required = True, help = "Number of the Genetic Code Translation Table: e..g. Mito Inv table 5")
+    parser = argparse.ArgumentParser(prog = "aln2tbl.py", usage = "aln2tbl.py --fasta My_assembly.fas --genes My_forward_genes.txt --code integer > My_feature_table.tbl", description = "Description: convert an assembly in fasta format into a feature table format. For additional information visit https://github.com/IMEDEA/mitogenomics or email Joan Pons at jpons@imedea.uib-csic.es")
+    parser.add_argument("-f", "--fasta", required = True, help = "input text file with assembly in fasta format: example file in /mitogenomics-master/data_examples/Hyalella_solida2319A_assembly.fas")
+    parser.add_argument("-g", "--genes", required = True, help = "input text file with list of gene names coded in forward strand (plus or positive strand) in a single line and separated by commas: example file in /mitogenomics-master/data_examples/pos_genes.txt")
+    parser.add_argument("-c", "--code", type = int, required = True, help = "Number (integer) of the appropriate mitochondrial Genetic Code Translation Table: vertebrate (2), yeast (3), mold, protozoan and coelenterate (4), invertebrate (5), echinoderm and flatworm (9), ascidian (13)")
     args = parser.parse_args()
     
-    #Define starts and stop codons for different genetic codes
-    if args.table == 2:
-        i = ["ATA", "ATG"] #Vertebrate Mitochondrial Code (table=2) CANONICAL START CODONS
-        s = ["TAA", "TAG", "AGA", "AGG"] #Vertebrate Mitochondrial Code (table=2) CANONICAL STOP CODONS
-    elif args.table == 4 or args.table == 9:
-        i = ["ATG"] #Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma (table=4) and Echinoderm and Flatworm Mitochondrial Code (table=9) CANONICAL START CODONS
-        s = ["TAA", "TAG"] #Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma (table=4) and Echinoderm and Flatworm Mitochondrial Code (table=9) CANONICAL STOP CODONS
-    elif args.table == 3 or args.table == 5 or args.table == 13:
-        i = ["ATA", "ATG"] #Yeast (table=3), Invertebrate (table=5), and Ascidian (table=13) Mitochondrial Code CANONICAL START CODONS
-        s = ["TAA", "TAG"] #Yeast (table=3), Invertebrate (table=5), and Ascidian (table=13) Mitochondrial Code CANONICAL STOP CODONS
+    #Define starts and stop codons for different genetic codes (https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
+    if args.code == 2:
+        i = ["ATT","ATC","ATA","ATG","GTG"] #Vertebrate Mitochondrial Code (genetic_code=2) CANONICAL START CODONS
+        s = ["TAA","TAG","AGA","AGG"] #Vertebrate Mitochondrial Code (genetic_code=2) CANONICAL STOP CODONS
+
+    elif args.code == 3:
+        i = ["ATA","ATG","GTG"] #Yeast (genetic_code=3) Mitochondrial Code CANONICAL START CODONS
+        s = ["TAA","TAG"] #Yeast (genetic_code=3) Mitochondrial Code CANONICAL STOP CODONS
+
+    elif args.code == 4:
+        i = ["TTA","TTG","CTG","ATT","ATC","ATA","ATG","GTG"] #Mold, Protozoan, and Coelenterate Mitochondrial Code and the Mycoplasma/Spiroplasma (table=4) CANONICAL START CODONS
+        s = ["TAA","TAG"] #Mold, Protozoan, and Coelenterate Mitochondrial Code (genetic_code=4) CANONICAL STOP CODONS 
+
+    elif args.code == 5:
+        i = ["TTG","ATT","ATC","ATA","ATG","GTG"] #Invertebrate (table=5) Mitochondrial Code CANONICAL START CODONS
+        s = ["TAA","TAG"] #Invertebrate (table=5) Mitochondrial Code CANONICAL STOP CODONS
+
+    elif args.code == 9:
+        i = ["ATG","GTG"] #Echinoderm and Flatworm Mitochondrial Code (genetic_code=9) CANONICAL START CODONS
+        s = ["TAA","TAG"] #Echinoderm and Flatworm Mitochondrial Code (genetic_code=9) CANONICAL STOP CODONS 
+
+    elif args.code == 13:
+        i = ["TTG","ATA","ATG","GTG"] #Ascidian (genetic_code=13) Mitochondrial Code CANONICAL START CODONS
+        s = ["TAA","TAG"] #Ascidian (genetic_code=13) Mitochondrial Code CANONICAL STOP CODONS
     else:
         print("ERROR: Genetic Code Table {} not implemented".format(str(args.table)))
         sys.exit(-1)
-    
+
     #Import, create and define list of genes coded in the positive (or plus or ) strand
     #Take command argument -p (file with gene names in a single line and separated by commas)
     genesfile = args.genes
@@ -154,10 +169,10 @@ def process(i, s, plus, fasta_sequences):
                     pass
                 if length%3 == 1 and str(seq_record.seq[pos_trailing - 1]) == "T": #If stop codon is truncated and composed of a simple base e.g. (T)
                     print("\t\t\ttransl_except\t(pos:{},aa:TERM)".format(str(pos_trailing)))
-                    print("\t\t\tnote\tTAA stop codon is completed by the addition of 3' A residues to the mRNA")
+                    #print("\t\t\tnote\tTAA stop codon is completed by the addition of 3' A residues to the mRNA")
                 elif length%3 == 2 and str(seq_record.seq[pos_trailing - 2:pos_trailing]) == "TA": #If stop codon truncated but composed of two bases e.g. (TA)
                     print("\t\t\ttransl_except\t(pos:{}..{},aa:TERM)".format(str(pos_trailing - 1), str(pos_trailing)))
-                    print("\t\t\tnote\tTAA stop codon is completed by the addition of 3' A residues to the mRNA")
+                    #print("\t\t\tnote\tTAA stop codon is completed by the addition of 3' A residues to the mRNA")
                 elif length%3 == 0 and str(seq_record.seq[pos_trailing-3:pos_trailing]) in s:
                     pass
                 else:

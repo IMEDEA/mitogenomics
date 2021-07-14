@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+# This software is released under the license GNU GPLv3
 
 import sys
 import os
@@ -9,10 +10,10 @@ import re
 
 
 def get_args():
-    parser = argparse.ArgumentParser(prog = "aln.py", usage = "mitos2fasta.py --mitofile reference.fasta --genefile genesfile.fasta --convertfile Y/N > alignment.fasta", description = "Description: align genes to mitogenome sequence reference")
-    parser.add_argument("-m", "--mitofile", required = True, help = "Input file with mitogenome sequence in fasta format")
-    parser.add_argument("-g", "--genesfile", required = True, help = "Input file with annotated genes names in fasta format")
-    parser.add_argument("-c", "--convertfile", required = True, help = "Headers of Input fasta file from mitos will be sanitaized Yes=Y No=N")
+    parser = argparse.ArgumentParser(prog = "aln.py", usage = "mitos2fasta.py --mitofile My_mitogenome_sequence.fas --genefile My_mitos2_genes.fas --convertfile Y/N > My_assembly.fas", description = "Description: align genes to mitogenome sequence reference")
+    parser.add_argument("-m", "--mitofile", required = True, help = "Input file with mitogenome sequence in fasta format, as submitted to MITOS")
+    parser.add_argument("-g", "--genesfile", required = True, help = "Input file with MITOS output with individual genes in fasta format")
+    parser.add_argument("-c", "--convertfile", required = True, help = "Gene names (fasta headers) from MITOS will be simplified and made compliant with aln2tbl. Yes=Y No=N")
     args = parser.parse_args()
 
     return args

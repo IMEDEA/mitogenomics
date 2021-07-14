@@ -1,0 +1,158 @@
+>Features Hyalella_solida
+1	185	misc_feature
+			note	putative control region
+186	242	gene
+			gene	trnC
+186	242	tRNA
+			product	tRNA_Cys
+334	276	gene
+			gene	trnY
+334	276	tRNA
+			product	tRNA_Tyr
+996	335	misc_feature
+			note	putative control region
+997	1058	gene
+			gene	trnM
+997	1058	tRNA
+			product	tRNA_Met
+1063	2044	gene
+			gene	nad2
+1063	2044	CDS
+			product	NADH dehydrogenase subunit 2
+			transl_except	(pos:2044,aa:TERM)
+2045	2107	gene
+			gene	trnW
+2045	2107	tRNA
+			product	tRNA_Trp
+2108	2170	gene
+			gene	trnG
+2108	2170	tRNA
+			product	tRNA_Gly
+2171	3709	gene
+			gene	cox1
+2171	3709	CDS
+			product	cytochrome c oxidase subunit 1
+3709	3769	gene
+			gene	trnL2
+3709	3769	tRNA
+			product	tRNA_Leu2
+3770	4450	gene
+			gene	cox2
+3770	4450	CDS
+			product	cytochrome c oxidase subunit 2
+4451	4512	gene
+			gene	trnK
+4451	4512	tRNA
+			product	tRNA_Lys
+4513	4574	gene
+			gene	trnD
+4513	4574	tRNA
+			product	tRNA_Asp
+4575	4730	gene
+			gene	atp8
+4575	4730	CDS
+			product	ATP synthase F0 subunit 8
+4724	5395	gene
+			gene	atp6
+4724	5395	CDS
+			product	ATP synthase F0 subunit 6
+5403	6191	gene
+			gene	cox3
+5403	6191	CDS
+			product	cytochrome c oxidase subunit 3
+6192	6545	gene
+			gene	nad3
+6192	6545	CDS
+			product	NADH dehydrogenase subunit 3
+6544	6594	gene
+			gene	trnS1
+6544	6594	tRNA
+			product	tRNA_Ser1
+6595	6656	gene
+			gene	trnE
+6595	6656	tRNA
+			product	tRNA_Glu
+6735	6675	gene
+			gene	trnF
+6735	6675	tRNA
+			product	tRNA_Phe
+8446	6736	gene
+			gene	nad5
+8446	6736	CDS
+			product	NADH dehydrogenase subunit 5
+			transl_except	(pos:complement(6736),aa:TERM)
+			note	TAA stop codon is completed by the addition of 3' A residues to the mRNA
+8508	8447	gene
+			gene	trnH
+8508	8447	tRNA
+			product	tRNA_His
+9817	8509	gene
+			gene	nad4
+9817	8509	CDS
+			product	NADH dehydrogenase subunit 4
+			transl_except	(pos:complement(8509),aa:TERM)
+			note	TAA stop codon is completed by the addition of 3' A residues to the mRNA
+10104	9811	gene
+			gene	nad4L
+10104	9811	CDS
+			product	NADH dehydrogenase subunit 4L
+10167	10106	gene
+			gene	trnP
+10167	10106	tRNA
+			product	tRNA_Pro
+10219	10279	gene
+			gene	trnI
+10219	10279	tRNA
+			product	tRNA_Ile
+10335	10276	gene
+			gene	trnQ
+10335	10276	tRNA
+			product	tRNA_Gln
+10334	10393	gene
+			gene	trnA
+10334	10393	tRNA
+			product	tRNA_Ala
+10394	10456	gene
+			gene	trnN
+10394	10456	tRNA
+			product	tRNA_Asn
+10463	10518	gene
+			gene	trnR
+10463	10518	tRNA
+			product	tRNA_Arg
+10519	10578	gene
+			gene	trnT
+10519	10578	tRNA
+			product	tRNA_Thr
+10579	11064	gene
+			gene	nad6
+10579	11064	CDS
+			product	NADH dehydrogenase subunit 6
+11064	12197	gene
+			gene	cob
+11064	12197	CDS
+			product	cytochrome b
+12196	12255	gene
+			gene	trnS2
+12196	12255	tRNA
+			product	tRNA_Ser2
+13206	12268	gene
+			gene	nad1
+13206	12268	CDS
+			product	NADH dehydrogenase subunit 1
+13260	13201	gene
+			gene	trnL1
+13260	13201	tRNA
+			product	tRNA_Leu1
+14258	13261	gene
+			gene	rrnL
+14258	13261	rRNA
+			product	16S ribosomal RNA
+14309	14259	gene
+			gene	trnV
+14309	14259	tRNA
+			product	tRNA_Val
+14953	14310	gene
+			gene	rrnS
+14953	14310	rRNA
+			product	12S ribosomal RNA

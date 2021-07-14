@@ -1,0 +1,2013 @@
+Seq-submit ::= {
+  sub {
+    contact {
+      contact {
+        name
+          name {
+            last "Zapelloni" ,
+            first "Francesco" ,
+            middle "" ,
+            initials "" ,
+            suffix "" ,
+            title "" } ,
+        affil
+          std {
+            affil "University of the Balearic Islands (UIB)" ,
+            div "Department of Biology" ,
+            city "Palma de Mallorca" ,
+            sub "Balearic Islands" ,
+            country "Spain" ,
+            street "Carretera Valldemossa km 7.5" ,
+            email "francesco.zapelloni@uib.eu" ,
+            postal-code "07120" } } } ,
+    cit {
+      authors {
+        names
+          std {
+            {
+              name
+                name {
+                  last "Zapelloni" ,
+                  first "Francesco" ,
+                  middle "" ,
+                  initials "" ,
+                  suffix "" ,
+                  title "" } } ,
+            {
+              name
+                name {
+                  last "Jurado-Rivera" ,
+                  first "Jose" ,
+                  middle "" ,
+                  initials "A." ,
+                  suffix "" ,
+                  title "" } } ,
+            {
+              name
+                name {
+                  last "Pons" ,
+                  first "Joan" ,
+                  middle "" ,
+                  initials "" ,
+                  suffix "" ,
+                  title "" } } ,
+            {
+              name
+                name {
+                  last "Jaume" ,
+                  first "Damia" ,
+                  middle "" ,
+                  initials "" ,
+                  suffix "" ,
+                  title "" } } ,
+            {
+              name
+                name {
+                  last "Juan" ,
+                  first "Carlos" ,
+                  middle "" ,
+                  initials "" ,
+                  suffix "" ,
+                  title "" } } } ,
+        affil
+          std {
+            affil "University of the Balearic Islands (UIB)" ,
+            div "Department of Biology" ,
+            city "Palma de Mallorca" ,
+            sub "Balearic Islands" ,
+            country "Spain" ,
+            street "Carretera Valldemossa km 7.5" ,
+            postal-code "07120" } } ,
+      date
+        std {
+          year 2021 ,
+          month 7 ,
+          day 8 } } ,
+    subtype new ,
+    tool "tbl2asn 24.9 - LINUX UNIX" } ,
+  data
+    entrys {
+      set {
+        class genbank ,
+        seq-set {
+          set {
+            class nuc-prot ,
+            descr {
+              source {
+                genome mitochondrion ,
+                org {
+                  taxname "Hyalella solida" ,
+                  db {
+                    {
+                      db "taxon" ,
+                      tag
+                        id 2759784 } } ,
+                  orgname {
+                    name
+                      binomial {
+                        genus "Hyalella" ,
+                        species "solida" } ,
+                    attrib "specified" ,
+                    mod {
+                      {
+                        subtype specimen-voucher ,
+                        subname "2319-A" } } ,
+                    lineage "Eukaryota; Metazoa; Ecdysozoa; Arthropoda;
+ Crustacea; Multicrustacea; Malacostraca; Eumalacostraca; Peracarida;
+ Amphipoda; Senticaudata; Talitrida; Talitroidea; Hyalellidae; Hyalella" ,
+                    gcode 1 ,
+                    mgcode 5 ,
+                    div "INV" } } ,
+                subtype {
+                  {
+                    subtype country ,
+                    name "Peru: Titicaca, Lago Umayo" } } } ,
+              pub {
+                pub {
+                  gen {
+                    cit "Unpublished" ,
+                    authors {
+                      names
+                        std {
+                          {
+                            name
+                              name {
+                                last "Zapelloni" ,
+                                first "Francesco" ,
+                                initials "F." } } ,
+                          {
+                            name
+                              name {
+                                last "Jurado-Rivera" ,
+                                first "Jose" ,
+                                initials "J.A." } } ,
+                          {
+                            name
+                              name {
+                                last "Pons" ,
+                                first "Joan" ,
+                                initials "J." } } ,
+                          {
+                            name
+                              name {
+                                last "Jaume" ,
+                                first "Damia" ,
+                                initials "D." } } ,
+                          {
+                            name
+                              name {
+                                last "Juan" ,
+                                first "Carlos" ,
+                                initials "C." } } } } ,
+                    title "Phylogenomics of the Hyalella amphipod
+ species-flock in the Andean Altiplano" } } } ,
+              user {
+                type
+                  str "Submission" ,
+                data {
+                  {
+                    label
+                      str "AdditionalComment" ,
+                    data
+                      str "ALT EMAIL:francesco.zapelloni@uib.eu" } } } ,
+              user {
+                type
+                  str "Submission" ,
+                data {
+                  {
+                    label
+                      str "AdditionalComment" ,
+                    data
+                      str "Submission Title:None" } } } ,
+              user {
+                type
+                  str "NcbiCleanup" ,
+                data {
+                  {
+                    label
+                      str "method" ,
+                    data
+                      str "SeriousSeqEntryCleanup" } ,
+                  {
+                    label
+                      str "version" ,
+                    data
+                      int 8 } ,
+                  {
+                    label
+                      str "month" ,
+                    data
+                      int 7 } ,
+                  {
+                    label
+                      str "day" ,
+                    data
+                      int 8 } ,
+                  {
+                    label
+                      str "year" ,
+                    data
+                      int 2021 } } } ,
+              create-date
+                std {
+                  year 2021 ,
+                  month 7 ,
+                  day 8 } } ,
+            seq-set {
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida" } ,
+                descr {
+                  molinfo {
+                    biomol genomic } } ,
+                inst {
+                  repr raw ,
+                  mol dna ,
+                  length 14953 ,
+                  seq-data
+                    iupacna "CACCGCCTAATTTTTTATATTTTATAAAAATGTGATTTAAATTATTATA
+AACAATAAATAAAAATAAATATTTCAGATATAAAATCATTTATTTAAATATATAATACAAATAATTTCATTTTTGAAA
+TATTTATTTTTATTTATTGTTTATAATAATTTAAATCACATTTTTATAAAATATAAAAAATTAGGCGGTGTAAGATCA
+CGTTAAGTTGCAAACTTAAAGAAGATGACTCTAATTAAATAAATTAATCTAACTTGTAAGTATCGAAATTTAGTTTAG
+ACCTAAGTGTTTTTAAGTTTACAACTTAACGTGTTTTACACTACTTAAACTTATTTTATTTTTTTTTTTAAAAAAAAT
+AAGTTTTTAAGTAATTTTAAACTTTTTTAGCAAAATTGACTTTTGCCGGCAAAACGTTGTCCTCTACATTAATATAAT
+ATTTTATTGTTAATTTTTTATTTTTTCTCTTTAAAAGAAATAAGATATCTAATAATATATCTTATTTAAAAATAAATT
+TTTTCTTTTTATTTTAGGCTAAAATTTTTGCTTTAGCAATAGAAAATTTTAGCGTAAAAGAAAAAATTTATAAAGATT
+GATTTTGCTCTAAACAACAAATATCTTTAATTTAAAGTTAGTAACACAGTTCTATCAACGCCTTATAAAGGCATTGAT
+AGAACTGTGTTAATAAAAATCAGTTAAGAATAAATATTTTTAAAAATTTGTATTAAAAATAATTTTTAATGCAAATTT
+TTAAAAATATATTTATTAGTAATTACTTATTTTTAAAAAATTATATTAAAATTTAATTAGCATTGAAAAATCTTAAAA
+ATAGTGAGTTAAAGCTATAAATTGTTTAAATAGAAATCTTTTCTATTTAAACAATTTATAATTTAAAAGTGTGTTATG
+TATTCTTTCTAAATCACTATTAAAGTTTTTATTATATGTTCCACATAATTCTTATTTATAAAAATTATTAATTTTATA
+TAAAAAAAAAAAAAAAGATAAGCTAAATAAGCTATCGGGTTCATACCTCGTTTATGAATAAATTCTCTTTTTATTTAA
+TGTTAATACACCCTTCTTTATTTTTGTTTTATTTTTCTTTGTTACTTAGTATCTTTTTGATTATTTCAGCTAATTCTT
+GATTTGTTGTTTGAATAGGATTAGAAATAAATTTGATTTTTTTTATTCCTTTAATATTAAAAAAAAATAATAAATATA
+GCAACGAATCAAGAATTAAGTATTTTTTAACACAAGCTTTTGCGTCTGTTTTAATTATCAATAGTGCCCTTCTTTTAA
+GAAAAAGTGCGGTAGTATTGGAGAATATTTTATTGGGAGCTTTGTTGTTGAAAAGAGGAAGAGCCCCTTTTCATCAAT
+GATTGCCTTCTTTAGTAGAGGGTTTATCTTGAAATTGTTTAATAGTCCTTTTTATTTTACAAAAAATCAGTCCATTAC
+TGCTAATTTCTTTTTTGTTAAAGGAAGGGACAACTCGGGGTATAAGTTACATGGTTATTATTGCTTGTGCTGTAGTCG
+GAAGACTCGGAGGAATTATAAGTGTGTCTTTACGAAAAATTATGGCTTACTCTTCTATTTCACACATAAGATGAGTAT
+TAACGAGAATAGTATTATCTAATTTCAGGTGAATAAGGTATTACTTAGTTTATTGTATAGTTTTAGTTTGTACTTTAG
+ATATGTTCAGTAAGAGAAGTGTATTTTCTATCAATCAATTGATACTGAGAGGCATAAAAATTCGTGTTGTTTTAGGAG
+TAAGCTTGCTTTCTTTAGGCGGGCTACCTCCTTTCACAGGGTTTGTACCTAAATTTATAGTCAGGGTAAGATTATTAC
+AAAATGAGCTTTATTTTATTTTTTTTGTGTTATTAGGAAGAACTTTTTTAAGTTTGTTTTTTTATATGCGAATTGTGT
+TAGTTAGGGCTATATTAAGCAGTAAAAATATAGTGTTTAATTTTAAAGTAGAGCTAAAAGAGACTAAAATTAGGTTAA
+ATGTGATGGGGCTTATTATTCCTAGCTTATTTTTTTTGGTCTTATTAAACTTTAAGTTATTTAAACTAAGAGCCTTCA
+AAGCTTAAAAAAAGCACTGCTTAAGTTTAATGAGCTTTAAGTTATATAAACTTTAAGCCTTCCAAGCTAAAAAAAAGA
+ACCCCTTAAGTTCAAATTATTAATCGTTGATTTTTTTCCACCAATCACAAAGATATCGGTACATTATATTTTATTTTA
+GGTGCTTGGGCTAGGGCTATTGGCACTTCTATGAGTGTAATCATTCGGTCCGAACTAAGGGCACCAGGGAATTTAATT
+GGAGATGATCAAATTTATAATGTAATAGTAACTGCACATGCATTTGTTATAATTTTTTTTATGGTTATACCTATTATA
+ATTGGAGGGTTTGGAAATTGATTAGTGCCTCTTATATTAGGCAGACCAGATATAGCGTTTCCTCGAATAAATAATATA
+AGATTTTGGCTATTGCCTCCTTCTTTGTCTTTATTACTTATGAGTGGGTTAGTAGAAAGAGGAGTAGGAACTGGGTGG
+ACAGTTTATCCTCCTTTGGCAGGGGCTGTCGGGCATAGTGGAGGTTCTGTAGACTTAGCTATTTTTTCTTTACATTTA
+GCGGGAGCTTCTTCTATTTTAGGTGCTATTAATTTTATCTCTACTGTTTTAAATATGCGAACACCGGGAGTAAGGATA
+GATCGAGTTCCTCTGTTTGTTTGATCAGTGTTTATTACTGCTATTTTATTACTTTTATCGTTGCCTGTTTTAGCTGGT
+GCTATTACTATGTTACTAACAGACCGTAATTTAAATACTTCTTTTTTTGACCCTAGAGGGGGAGGAGACCCTATTTTA
+TATCAGCACTTATTTTGATTTTTTGGTCACCCAGAAGTATATATTTTAATTTTACCAGGGTTTGGGTTGATTTCTCAT
+ATTGTGAGCGAAGAGTCTGGTAAAAAAGAGACATTTGGAGTACTGGGAATAATTTATGCAATATTAGCTATCGGTGTT
+TTAGGGTTTATTGTCTGAGCACACCATATGTTTACCGTAGGTATAGATGTAGACACTCGAGCGTATTTTACTTCAGCT
+ACAATAATTATTGCAGTTCCAACTGGAATTAAGGTATTTAGCTGGTTAGGTACGTTACAAGGGGGAAATTTAAGATTT
+TCTTTATCTATAATTTGAGCTTTAGGCTTTATTTTTTTATTTACTGTAGGAGGTTTAACCGGTGTTATGTTAGCTAAT
+TCTTCTATTGATGTAGTGCTTCATGACACTTATTATGTAGTGGCTCATTTTCATTACGTACTATCAATAGGAGCTGTA
+TTTGGCATTTTTGCTGGGTTCACTCATTGGTATCCTTTATTTACTGGACTTACTTTAAATAGGGTTTATGGTAAAGTT
+CATTTTTATACGATATTTTTAGGAGTTAATTTAACTTTTTTCCCTCAGCACTTTTTAGGGCTAAACGGGATGCCCCGT
+CGTTATTCAGACTATCCTGACTCTTTTTCTAGTTGGAATATAGTTTCATCTTTAGGATCTTATTTGTCTGTACTTGCT
+ATGATTTTTTTTATTATAATGATCTTAGAGAGAGTTGTAACTAAGCGGCAGAGATTATTTAGGAGGAGTTTAAGCACT
+TCTTTAGACTGAGCCCATCCTTATCCGCCTGCAGATCACAGGTATAGTGACGTCCCTATATTAATAAATTAGCTAAAA
+TGACAGAATTATGTGACAGACTTAAAGCCTGTTTATGAGGTCACTCTTTTAGTAATACCTACTTGAGCTTCACTTAAT
+TTTCAAGACAGAGCATCTCCTGGCATAGAGCAGTTAGTATTTTTTCACGATTTTACAATAATTGTAGTCACTTTAATT
+ACTGTTCTAGTAGGGTCGAGTATAATCTTTATTTGTGGCTATAAGCTAACTAATCGTATTTTATTGCAGGAGCAGTCA
+GTTGAAATTATTTGAACTGTATTTCCTGTGTTTATTTTATTAAGTATCGCTCTTCCTTCCTTAAAGGCACTTTATTTA
+TTAGATGATCCTTTTAGGCCTAGTTTAACAATTAAAGCGGTGGGCCACCAATGGTACTGGTCCTACGAATACTCTGAT
+TTCCCTGGAATTGAGTTTGATTCTTACATAGTTCTTGAAGAAAGTACAAATTATTCCGCTCGATTATTGGAAACAGAC
+AATTCTTTGGTATTGCCTAGCTTAAGTCAAATTCGAGTTATTGTGACTGGTGGAGATGTTATTCATTCTTGGGCTGTT
+CCATCGTTGGGGGTCAAAGCTGACGCTGTTCCAGGACGGCTTAATCAAATTATAATGTATATTAATCGAAGCGGAATT
+TTTTATGGTCAATGCTCCGAGATTTGCGGTGCTAACCATAGATTTATGCCAATTAAGGTTGAAGCTGTTCCTATACCC
+TATTTTATTAATTGAGCAATAAAAATAAATTAGCATTTAGTGACCGAATTAATGGTGTGAATCTTTTAAATTCATTAT
+AGCACAGCTCTAAGTGTAAGAAATTAGTAAAAAAAAATTACGTTAGTTTGTCAAGCTAAAATTACTTTAGTGTTTCTT
+GATCCCTCAAATAGCTCCTATATTATGATTTATCTTGTTTTTTTATTTTATTTTGTTGGCTGTAATTTTAATAAATTT
+GGTATTTTTTGATCCTTTATGTAATAATAATTTAAAGAACAGGAGAAAAGAGCTAATTAAACTAAATTGAAAGTGATA
+ACGAATTTGTTTGCTATTTTCGACCCCGCAAGACCTAACTTTTTTTCCAGTAATTGAACCGCTAGATTATTATTTATT
+TTGTTGTACCCCATAGTACAATGAGCGGTCGGTAGACGTTACATTAGAATAATTATAAACTTTAAATTTTATCTATTT
+AGAGAATTTAAGCCTATCGTAAAAAAGACTAGCTTTATTCTTTTAATTAGAGTAAGAATTATATTATTTATTATATTT
+AATAATGTGATAGGCTTATTTCCTTATGTATTTACTTCTAGAGCTCATTTAAGATTTAGACTTAGGTTTGGACTAACA
+AGGTGAGTTGGGCTTATATTATATGGTTGAGTTTATAACTATAATAATCTATTAGTGCACTTAATCCCTCAAGGAACT
+CCTGCAGGTTTAATGCCTTTTATGGTTATTATTGAAACGGTTAGTAATGTAATTCGACCTGGCACTTTGGCTGTTCGA
+TTGAGCGCTAATATAATTGCAGGGCACTTATTACTGTCTTTGTTAAGTAGCGCTTTTATGGTTAGGCCTTTGATAGGA
+GTCCCTTTATTAATAGGAGCAGAGTTTATATTAATAGGATTAGAAAGAGCTGTAGCTTTTATTCAAAGATATGTATTT
+AGAGTTTTACTAACTCTATACGTAGCAGAATTCACAGACTAATGGACTAATGACTACGCATTCCAACCATCCTTATCA
+CTTGGTAGAAAAAAGACCTTGACCATTAATTGCATCTGTTAGAGCTATAATTATAGTAAGAGGCTTAGTAAAATGGTT
+TCACGAGTTTGACTCCAGTTTGCTGTTATTGGGAGTAATTAGAGTCTTTATTACTTCAGCTCAATGATGACGTGATGT
+TTCTCGAGAGGCTTCTTTTCAGGGATTACATACTACTAAGGTAGTGGTAGGATTACGTTGAGGTATATTATTATTTAT
+TGTTTCTGAAGTTTTATTTTTTTTCTCGTTTTTTTGGGCTTTTTTTCACAGTAGTTTAAGAGCAACGATAGAAATTGG
+AGCAGAATGGCCTCCAACTGGAATTAAAGCTTTAAATCCATTTCAAGTGCCTTTACTTAATACCGCTATTCTGTTAGC
+CTCAGGTGTCACAGTAACTTGAGCTCATCACGCTATTTTAGAAAACAACCACTCCCAGGCAACACAAGGACTTTTAAG
+CACTGTTTTATTGGGAGGGTACTTCAGGGGGTTGCAAGGATTTGAATATTTAGAGTCTTGTTTTTCAATTTCAGACTC
+TGTTTATGGGACTACTTTTTTTGTGGCTACTGGATTTCATGGGTTACATGTAATTATCGGGTCTACATTTTTAATGGT
+TAATTTTTATCGTTTACTTTTAGGCCATTTTTCTAGAAGGCATCATAATGGAGTCGAAGCTGCTATTTGGTATTGACA
+TTTTGTAGATGTAGTGTGACTATTTTTATATGTTTCTATCTATTGATGAGGGAGTTAAATGATCAATATAATAGGTTT
+AACAATTTTATTCTTTTTTATTTCTTCTTTATTATGATTTCTTGCGCTAAGGCTAGGGTTAAAAACTGATAAAAGGCG
+TGAAAAAGTAAGACCCTTTGAATGTGGGTTTGATCCATTTAAAAAATCACGTGTTCCTTTTTCTCTCCGGTTTTTTTT
+AGTTACTGTTATTTTTCTTGTTTTTGATGTAGAAGTAGCTCTTTTATTTCCATTAGGATTGTTAAAAATTACATCTGA
+TGTGTTATTTGTCGGGTTATCAGGTCTTGTGTTAATCTTAGTGTTAAGCTTAGGGCTAATCCACGAATGGAATCAAGG
+AGGGCTAAATTGAATTTATTAAAATGAAAAAAAGACTTCTAATCTTTAAGTAGTGAGCGCACTTCATTTTTGTTTTTA
+TAGTGTAAAAAACATATAATTTTTTCAAAATTAAGATAGCAGGCCCTTTAAAACATACATAATACTTACAATGTATTC
+ACAGATAATTTCTCAATTATAGCTTCAATATAATGCTCTGTATAAGCTATGTAAATAGTATAATAAACAAAGAAAAAT
+TAATAAACTAAATGTAACTAAATATGCACTAATTAAGACAGTGACTTGGCCTTTTTGAAGTATACTACTATAGTAGCT
+TAAAACAAAAGTTATTTTTTTTGGTGGATAAGTTTCCAACCAACCTTTATCTATTAATTGAGAGGAGTTTAATCCTGC
+TATTAAAGCAAATTTAGTTAAATTTTTAGTTGTTAAAAAAGGAAGATTTCACATTTTACTAGAACTAGTTGTGATAAG
+AGTTAAATTGAACGTATAATTAATGATTTTTTGATGATTCAAAGTTAGTATTGTTACTATTCCTCTGATAAATATAAT
+ACATAAGATATAATATTTATTTAAGTTAGTTATTATTAAACTATAAGGAGTTCATATGACAGCTCAAGAGAATATATA
+GCCAACTAAGATCCCCATAAAAAATAATACAGACACACTAATAATAACTGAGTTGTCTCTGTCTTCTAAATTATACGC
+GGACTTGCTATTTCCGTTGTTAGTCACAGCTAAATAAATCACACGTAGCCTATAGGCAACTGTTATACCAGTTGCTAT
+AATAATTAACATTAAAATAGTCCTATTAAATAAGTTAGAGATAGCAAAATCTAATGTTAAATCTTTAGAAAAAAAACC
+GGATAAAAAAGGAAATCCTAATAAAGATAAATTTATTATTGAAAATACTGTTATTAAAACGGGGGACCTAACTCACAT
+CCCTCCTATAAAACGTGAGTCTTGTGTTCTATTAGTCATATGAATTATTACACCTGCTGATATGAATAAAGTTGATTT
+AAATATAGCATGAGAAATTATATGAAAAAAAGCAATATTTTTTATGCCTATACTTAGGATTATTATTATTAATCCTAA
+TTGGCTTAATGTAGAAAGAGCTACAATTTTTTTTAGGTCTGTTTCAAAATTAGCCCCCCACCCGGCTATTAGTATAGT
+TAGAACAGAAATAATTAGCAAACCTTGTAAAAATAGGGATTTTTCTAAGATATGGAAAAAGCGAATAATTAGGTAAAC
+TCCTGCAGTTACAAGCGTAGATGAGTGGACTAAAGCAGAAACTGGCGTAGGGGCAGCTATTGCCGCTGGTAGTCAAGC
+TGAAAAAGGGATTTGAGCTCTTTTGGTTATGGCGGCTAAAATAATAAAGAAACAAATTATTTTGTACTCTGTTGTCTC
+CATACAAAAAAAATTTCAAGAGCCAGCATAACTTAAGACTCCAATTACTATTAAAATACATACATCACCGATTCGATT
+TCTGAGGAGGGTAAGTATCCCTGCGTTACAGGCTCTTTCATTTTGGTAGTAAATAACTAAGGCGTAAGAAGTAAGCCC
+AAGCCCGTCTCAACCTAATAGTAAGCTAATTAAATTAGGCCTGATAATAAGGAATATTATGGAAGCTACAAAAAGCAT
+TAATAATAACATAAACCGAATTTTATTTATTTCTTCTCGTATATAGTACGAGGAAAAAAGACAAATAGAAGCTGTAAT
+AGTTATCACTGTACTTAAAAAGATTAAAGATATTCAATCAATTAAAATTCTTATTGTAATCGAGCTTCTATTGAATAT
+TATAATTTCTCAGTCTAAAATAATTGTCTTTTCTTTATAAATAAAAATAAAAATCATAACTAGTGAGCTAGCTATAAT
+GACTGCTGTTAATAAACAAAAAATTTTATACACATTATTTATAAGTTTCAATGTTTTAAATAAAATTATTTTTCTATT
+TCCACAAAATAGCGTTTTGATTAAACTATTAAAACAAAATATAAATATTATATTTAAAATAAGAGCGTTTAAAGGAAT
+TCAATGAAGAAATACATTTAAGTACTCTAAAGAAGAATTATGAGTTAATGCTCTTTTACTTTTATTAAACACTCCGTG
+TTGACTTAAAGAAAATAAATAGACGCTGTAAGTTACACTAAAAAATGTTAATAGAATTAAAAGAGGGATAACAGTGTG
+TCTTCATCTAATTAAACTAATAAGTAATATAATCTCTCTTCCTAAATTAATAGTAGGCGGTGCAGCTATATTGGCTGC
+AAGTAATAAAAATCAGCATAAAGACATTATTGGGGCTAAATTCAATAACCCCTTTCTTACTAACATTCTGCGGCTATT
+AGTTCGCTGATACACAGAATTAGCCAAAAAAAACAAACCAGAAGAACAAACTCCATGAGCTAATATTATTATTAAACA
+GCCTTTCACTCCCCACTCGGTTATAATAAATAAAGCTGCCACGCAAGTTCTTATGTGAACTACAGATGAAGAAGCAAT
+TAAAAGTTTTATGTCAGTGTAACGTAAACAATTAACCCTCACTAAAACTCCCCCTCAGACACTAATAGAAATAACTAG
+TTCTTTTATTAAATAGTAGCTACTATCTAATAAAGAAAATACACGGATTAAACCAAACCCCCCTAATTTAAGTAAAAC
+TCCAGCTAAAATTATAGACCCAGCTACAGGGGCTTCTACGTGTGCCTTCAATAATCATAAATGAACTCCATATATCGG
+AAATTTTACTAAAAATGCAGCAAATAAACAAAAAGCTCTTATAGTACCAGTTAAAAAAAAAGGAGTAAAAAACATGTA
+TCCACTTCCTGATAGTTTGATAGCCTGAAGAATAATAATTAATAAAGGTAGGGAACCAAAAATAGTGTAGAACAAGAG
+GTACACGCCGGCCTGTATTCGTTCGGGCTGGTATCCCCAGCCCAAAATAATAATTAAAATAGGGATAAGACAAGTTTC
+AAATAGTAAATAAAATGTTGCTATATTAGAAATAGTAAAAGTAAATCTCAATCTAACTAATATACAAACTATAATAAA
+TAAATAAAATTTTCTTTTTTTACTGCTATTTACATTATCTGTGCTTCTAATTATGGATAAAGCAACAATTCAAAGCCT
+AAGTAAAGTTAAAGCTCACCTAAAATAATCAAATTCTAAGTTTATATAACAGTGCTCTAGAGTAGAAGGCTTATTTAA
+TAGTAGAATAAACCTAACAAATAAAATAAAGAATAAAGTTTCTCCTCAGTTAAAAATTAAACCACAAATTAGAGCAGA
+GATAAGAATTTTTAACATTGAATAAAATTAAATAGCTTAAAATAGTCTTCTCCGTGTCTGTGCACTAAAGAAATTAAT
+AACGAAAGCCCTAATACGCCTTCACACACAATTATTACTAAAAAAAATAAAAGGTAAAATAGCTCTAAACCTAAAGAA
+GTAAATACAACTCTAATTAAAAAATAAATAGTAACAGATATTATTTCTAACCTAAGTAATCTGTTTAAAAGGTGGCTA
+TGATTAAACATAAAAGCGTATAGTCTTATACATAATATAAATAATGTTAAAATAATTAAATAATATCACATTTCAAAA
+AAAATAGTAATTTTTTATAGAACCCAAATCTATTGTTTTAGTTAAACTATTTTTTGATGTAGTAGTTAGTTTTATAAT
+TTTATTAAAATTCTGTTTTATAAAAAATAAATAAAGTGCCTGAAAAATAGGAGCACTCTGATATTGTGTTTATGCTTA
+TAGCCTTTATTTACCTAAATAGAATTTCCTTAAAAATCAAAATTTTACGTGCCTTACACCAAGATAAAGATAATAGTT
+TATAAAGAACACTTGTTTTGCGTACAAAAGGTATTTATGTTTGTCTTATTAGTTGAAGCCAAAAAGAGGCCAATCACT
+GTTGATGATTTAATTGATTTATATCCGACTGTCTACGATAAAATGAAAGTAGATTACGTTCAGTTTCGGCCTGAAAAA
+AGGGACACCTCGTTTTAACTTACGTAGTTTAATAAAAACGGTAGTTTTGTAAACTACAGTTGGTTCGCCTGTGAGTAA
+TATTATTAATTTCTTTAAGTATCTCTGTTGTACTAGCTTGCATATTTACACAAGTTAGGTCTCCTCTGGGCTTGGCTG
+TTATTGTGGTTATGTTTTCACTTTTTATTAGAATAAACATAAGATTAATTTGTAGCACTTCTTGATTTTCTTTATTAT
+TATTTATGCTTTTTTTAAGAGGTATGATAATTATCTTTATTTACGTTTGTTCTTTAGCTTCTAATGAAACACATTTTT
+ATTCGTTTAGGGTAATTTATTTAGTATTAATCTTTATAGTATTAATTACATTTAGCCCTGTTATTAACAGACTTATGA
+CAGTTGGAAGGGACTTACTCTCTAAAACAGATACTTGTATTTTAATACATAAAGTGTATTCTTTTAGGGTTTATTTAT
+TTACTTTAGCATTAATTATCTACTTATTAATTACTTTAATCGTAGCTGTAAAAATTTGTACAGTTAGAGATGGGCCAG
+TACGAACCAAAAAATAATGTTAACTCAATACTTTAAAAAGAATCCTTTATTTAACGTGTTCGACTCTACTTTAGTTAG
+ATTACCTGCCCCTTCTAATATTTCTAGTTTTTGAAATTTTGGCTCTTTATTATCGGGATGTCTGGTTGTTCAAATAGT
+TTCAGGAATTCTTTTGGCGTCGTCTTATACGGCAAGAATAGATATCAGGTTTAATATGATCATTAAAATTATAGAAGC
+AAGAGATAAAGGTTGACTAATTCGGTATCTTCACGCTAACGGGGCTTCCTTATTTTTTTTATGTCTATACATTCACGT
+AGGACGAGGAATTTATTATGGATCTTATCTATACAAACATACTTGAAATATTGGAGTGAGCATTTTACTTTTAACGAT
+AGCTGCTGCTTTTTTAGGTTATGTTTTACCTGTAAATCAAATATCTTTTTGAGGGGCGTCAGTAATTACAAATCTGTT
+TAGTGAAGTGCCTTATATCGGGGCTAATTTAGTTCAGTTTATTTGGGGAGGAGTGAGTGTAGATAGCCCTACTATTTG
+CCGGTTTTTTGCTTTCCATTTTTTAATCCCGTTTATTATTTTAGCACTAGTTGTTGTTCATATTACTTTATTACACCT
+AACAGGATCTAGAAATCCTATAGGAGTTGCAAGTAGACTCGATAAAATAGGGTTTCACTCTTATTTTTCTTTTAAAGA
+CGCCTTAGGAGTAGTTATGGTTTCTTTTTTGTTTAGCTTAATTTGTATTTATTGACCTTTAGTCTTAGGGGACGATGA
+AAATTTTAATGTAGCAGATCCTTCTGTTACCCCTCACCATATTCAACCCGAGTGGTATTTTTTATTTGCTTATGCTAT
+CTTGCGGTCTATTCCTAATAAGTTAGGTGGAGTTATTGCTTTAGCTCTGTCTGTTTTAATATTATACTTAATGCCTAT
+TACATTTTTAAGTAAAATGAAGAGAAGAGTATTTTATCCTTTAAATAAAAGATTATTTTGATTTTTTATTATGTCTGT
+AATTATATTGACTTGAATTGGGATATGTCCTGTAGAGGTCCCGTATGTATTGACAGGACAAGTATTCACTTTTTTTTA
+TTTTTTGTTTTATTTATTTAATCCAGTATTAATATTAATTTGAGATAAAATAGAGTAACTATTTAGTATAATTTACAT
+TTGTTTTGAAAGCTTAAAATGAGGTGTCTCAGTAGTTTGTTCATATATAATTAGTAAAACATTATTCTATAACCAACA
+GCGAAATAAAATATAAGTATAAACAAAGATACAGGCAAAAGGGTCTTTCAGGCTAAATACATTAGCTTGTCGTATCGA
+TAGCGGGGTAAAGTAGCCCGCACTCAGATAAATAAAAACCTGACTAGTATAGTTTTGAGTATAATTGTATAGCTAATT
+CCTCTGCTTAAAAATAACAAAACAAACAATAGACTTATAAAAATAATGTTACCATATTCAGCTATAAATAACAAACTA
+AACCTGCCTGCTGCGTATTCAGTGTTAAATCCTGAGACAAGTTCTGATTCTCCTTCAGAAAAATCATAGGGAGTGCGA
+TTAGTCTCAGCTAATCTAGTAATTTTTCAGATAAGTATTAGTGGAGCTAAGAATAAAGCATTTCAAATAAATATCTGA
+GTCTCTAAGGCTTCTTCTAGATTAAATGAAGAGTTCAGCCAAATAATCGTTAATAAGACTACTGTTAATCTTACTTCA
+TAGGAGATCATCTGAGCAACTGCTCGTAATCTACCCAATACGCTGTACTTACAATTAGACGCTCAGCCCCTTCTAATC
+ACAGGATAAACTGCTAATCTACTAATACAAATAAATAGCACTAAAGTAAAATTAAAATTTAATCCCCCTGCTTCTAAA
+GGAAGAAGAGTTCAAATAACTAGTATAAAAAATAAGCTAAAAATAGGAGAAATCAGATAAACAAATCTGTTAATGCTA
+CGTAAAAATAGTCTTTCTTTGTTAAATAATTTTACCGCATCTGCAAATGGTTGAAGCACTCCTCAAATTCCTACAACG
+GTGGGTCCTAGCCGAATTTGTGATCTACCTAAAACCTTACGTTCTATTAAAGTAATAAAGGCTACTCTCACTAAAACT
+ATAATAATTAAGATGGCATAAATTACTATCACTTTAAATGTACTCAATATTATTTGGTTACCCTAATTTTAAGTTCTA
+AACTTAACGCGCTAGTCCGCCTAAATAATTAAAGATCAGTTGGTCCTTTCGTACTAAACTGATAGGTTTTATTGAGGA
+GATAGAAACCAATCTGGCTTAAACCGATTTGAACTCAAATCATGTAAAAATTTAAAAGTTGAACAAACTCTCGCTAAT
+AGGGGCTACTCTATAAGGATATCTTAATTCAACATCGAGGTCGTAATCGTTTATATAAATAGGAACTTTCCATAAACA
+TTGCGCTGTTATCCCTAGAGTAACTTAACCTATTTTTCCTTATTTAAAGGAACTTAAAATCCATTGTTTAAATTAATG
+CTAGTGTAAATAGTACTACCGCCCCAGTTAAATAACTTTTAAACCCCTATTTTATAAAAAAATTAGTAGTATTATGAT
+TATAAAGCTTCTAGGGTCTTATCGTCCCCCTCTTTTATTTAAGTGTTTTTACTTAAACCCTAAATTATTTAATTTATT
+ACAGACAAAAGACAACTGTTAGGCCGTTCATTCCAGACTCCAATTAAGAGCCAAATGATTATGCTACCTTAGCACGGT
+CAGTATACCGCAGCCGTTAAATACTCACTGGGCAGGCCGTACCCTTTATCTGTCAAAAAGAAAAGTTTTTGTTAAACA
+TTCAATAGTTATTTGAGTTCCTTGTATAAAAAGAATTTAAATAATAATTTTGTAATTATACTATACTTGAATTTAATC
+AAAGCTATGCTGCTCTACGCCTATATTTATCAAAGCTCTTGAATTATTTGTAGTAAATAATTAATTGGCTTAGTATAA
+AAGCTAATTTTTATAAATATGTAAAAAATTATAGAAGAAAAGAGACTTTCTCCCTTAATAAAACATAACTAGCTAACC
+TAACTCGTAGAGTTTCACTTCTAAATTAAACAGGGTCTTATTTAATAGGCATTGTTTAGTTCGTAAAGGTTTCGAGAA
+TTTGCTGTACTACTTTATTTAAACAAATCCTGAAACAAAAGGCAATTAAACCACTATCGAGTTAAAGTATTTCCTATA
+AGTACTAAAAATTATAAAGCGCCTAAAAAGGAAACTCTCAGCGTAAATGAGCAAACTCACTTTATAGGCTTACTTTCC
+AGTAAGCTTACTTTGTTTCGACTTATCTCATAGAGAGTGACGGGCGATCTGAACACTTTAAGACCTATAGTCATAAGT
+ATAGTAATTAAAATTAAATCCACCTGATAGTTTATTTTTCGTATACTAGTGAGTATTGTGGCTAATCTAACTTAAAAA
+TATCTGCACCTTGATCTGTTTTTAAAAATTATTAACCATAAAAGACAATCTATACGAAGGTATACAAAATTCAATTAA
+GTGGGAATAAACGCGGATTATCGTTTATTGACAAGCCCCTCTAATAACTTAAAGCCGCCAAATATTCTTATTTTAATT
+TTAATGATAAGGATTAATAAACAAAATACTAGGGTATCTAATCCTATTTTATTTTTTTGTTTTATGGTTTAAATATCA
+CTATATAAATTTTTTTATTTTCTACCACTTCGTTTTTGCTAAGATATAATAAACACTCCCTACAACACAAAAAGAGTT
+TAGTCTAACCGCAGCTGCTGGCACTAATTTAACCCCCCGACAATAACTCGAATTTTTTATGCTGTAATTTTATAAACT
+AGGTTAAATTTAGTAGTTACTGTATACTATGTAAATTAATTGTTAAAGCTTTAAAAACTCATTAATTTTATAAAAAAT
+AATAAA" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            imp {
+                              key "misc_feature" } ,
+                          comment "putative control region" ,
+                          location
+                            int {
+                              from 0 ,
+                              to 184 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnC" } ,
+                          location
+                            int {
+                              from 185 ,
+                              to 241 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 67 } } ,
+                          location
+                            int {
+                              from 185 ,
+                              to 241 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnY" } ,
+                          location
+                            int {
+                              from 275 ,
+                              to 333 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 89 } } ,
+                          location
+                            int {
+                              from 275 ,
+                              to 333 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            imp {
+                              key "misc_feature" } ,
+                          comment "putative control region" ,
+                          location
+                            int {
+                              from 334 ,
+                              to 995 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnM" } ,
+                          location
+                            int {
+                              from 996 ,
+                              to 1057 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 77 } } ,
+                          location
+                            int {
+                              from 996 ,
+                              to 1057 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "nad2" } ,
+                          location
+                            int {
+                              from 1062 ,
+                              to 2043 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnW" } ,
+                          location
+                            int {
+                              from 2044 ,
+                              to 2106 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 87 } } ,
+                          location
+                            int {
+                              from 2044 ,
+                              to 2106 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnG" } ,
+                          location
+                            int {
+                              from 2107 ,
+                              to 2169 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 71 } } ,
+                          location
+                            int {
+                              from 2107 ,
+                              to 2169 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "cox1" } ,
+                          location
+                            int {
+                              from 2170 ,
+                              to 3708 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnL2" } ,
+                          location
+                            int {
+                              from 3708 ,
+                              to 3768 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 76 } } ,
+                          comment "tRNA_Leu2" ,
+                          location
+                            int {
+                              from 3708 ,
+                              to 3768 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "cox2" } ,
+                          location
+                            int {
+                              from 3769 ,
+                              to 4449 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnK" } ,
+                          location
+                            int {
+                              from 4450 ,
+                              to 4511 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 75 } } ,
+                          location
+                            int {
+                              from 4450 ,
+                              to 4511 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnD" } ,
+                          location
+                            int {
+                              from 4512 ,
+                              to 4573 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 68 } } ,
+                          location
+                            int {
+                              from 4512 ,
+                              to 4573 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "atp8" } ,
+                          location
+                            int {
+                              from 4574 ,
+                              to 4729 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "atp6" } ,
+                          location
+                            int {
+                              from 4723 ,
+                              to 5394 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "cox3" } ,
+                          location
+                            int {
+                              from 5402 ,
+                              to 6190 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "nad3" } ,
+                          location
+                            int {
+                              from 6191 ,
+                              to 6544 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnS1" } ,
+                          location
+                            int {
+                              from 6543 ,
+                              to 6593 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 83 } } ,
+                          comment "tRNA_Ser1" ,
+                          location
+                            int {
+                              from 6543 ,
+                              to 6593 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnE" } ,
+                          location
+                            int {
+                              from 6594 ,
+                              to 6655 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 69 } } ,
+                          location
+                            int {
+                              from 6594 ,
+                              to 6655 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnF" } ,
+                          location
+                            int {
+                              from 6674 ,
+                              to 6734 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 70 } } ,
+                          location
+                            int {
+                              from 6674 ,
+                              to 6734 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "nad5" } ,
+                          location
+                            int {
+                              from 6735 ,
+                              to 8445 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnH" } ,
+                          location
+                            int {
+                              from 8446 ,
+                              to 8507 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 72 } } ,
+                          location
+                            int {
+                              from 8446 ,
+                              to 8507 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "nad4" } ,
+                          location
+                            int {
+                              from 8508 ,
+                              to 9816 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "nad4L" } ,
+                          location
+                            int {
+                              from 9810 ,
+                              to 10103 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnP" } ,
+                          location
+                            int {
+                              from 10105 ,
+                              to 10166 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 80 } } ,
+                          location
+                            int {
+                              from 10105 ,
+                              to 10166 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnI" } ,
+                          location
+                            int {
+                              from 10218 ,
+                              to 10278 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 73 } } ,
+                          location
+                            int {
+                              from 10218 ,
+                              to 10278 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnQ" } ,
+                          location
+                            int {
+                              from 10275 ,
+                              to 10334 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 81 } } ,
+                          location
+                            int {
+                              from 10275 ,
+                              to 10334 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnA" } ,
+                          location
+                            int {
+                              from 10333 ,
+                              to 10392 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 65 } } ,
+                          location
+                            int {
+                              from 10333 ,
+                              to 10392 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnN" } ,
+                          location
+                            int {
+                              from 10393 ,
+                              to 10455 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 78 } } ,
+                          location
+                            int {
+                              from 10393 ,
+                              to 10455 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnR" } ,
+                          location
+                            int {
+                              from 10462 ,
+                              to 10517 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 82 } } ,
+                          location
+                            int {
+                              from 10462 ,
+                              to 10517 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnT" } ,
+                          location
+                            int {
+                              from 10518 ,
+                              to 10577 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 84 } } ,
+                          location
+                            int {
+                              from 10518 ,
+                              to 10577 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "nad6" } ,
+                          location
+                            int {
+                              from 10578 ,
+                              to 11063 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "cob" } ,
+                          location
+                            int {
+                              from 11063 ,
+                              to 12196 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnS2" } ,
+                          location
+                            int {
+                              from 12195 ,
+                              to 12254 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 83 } } ,
+                          comment "tRNA_Ser2" ,
+                          location
+                            int {
+                              from 12195 ,
+                              to 12254 ,
+                              strand plus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "nad1" } ,
+                          location
+                            int {
+                              from 12267 ,
+                              to 13205 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnL1" } ,
+                          location
+                            int {
+                              from 13200 ,
+                              to 13259 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 76 } } ,
+                          comment "tRNA_Leu1" ,
+                          location
+                            int {
+                              from 13200 ,
+                              to 13259 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "rrnL" } ,
+                          location
+                            int {
+                              from 13260 ,
+                              to 14257 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type rRNA ,
+                              ext
+                                name "16S ribosomal RNA" } ,
+                          location
+                            int {
+                              from 13260 ,
+                              to 14257 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "trnV" } ,
+                          location
+                            int {
+                              from 14258 ,
+                              to 14308 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type tRNA ,
+                              ext
+                                tRNA {
+                                  aa
+                                    ncbieaa 86 } } ,
+                          location
+                            int {
+                              from 14258 ,
+                              to 14308 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            gene {
+                              locus "rrnS" } ,
+                          location
+                            int {
+                              from 14309 ,
+                              to 14952 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } ,
+                        {
+                          data
+                            rna {
+                              type rRNA ,
+                              ext
+                                name "12S ribosomal RNA" } ,
+                          location
+                            int {
+                              from 14309 ,
+                              to 14952 ,
+                              strand minus ,
+                              id
+                                local
+                                  str "Hyalella_solida" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_1" } ,
+                descr {
+                  title "NADH dehydrogenase subunit 2 (mitochondrion)
+ [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 327 ,
+                  seq-data
+                    ncbieaa "MLMHPSLFLFYFSLLLSIFLIISANSWFVVWMGLEMNLIFFIPLMLKKN
+NKYSNESSIKYFLTQAFASVLIINSALLLSKSAVVLENILLGALLLKSGSAPFHQWLPSLVEGLSWNCLMVLFILQKI
+SPLLLISFLLKEGTTRGMSYMVIIACAVVGSLGGIMSVSLRKIMAYSSISHMSWVLTSMVLSNFSWMSYYLVYCMVLV
+CTLDMFSKSSVFSINQLMLSGMKIRVVLGVSLLSLGGLPPFTGFVPKFMVSVSLLQNELYFIFFVLLGSTFLSLFFYM
+RIVLVSAMLSSKNMVFNFKVELKETKISLNVMGLIIPSLFFLVL" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "NADH dehydrogenase subunit 2" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 326 ,
+                              id
+                                local
+                                  str "Hyalella_solida_1" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_2" } ,
+                descr {
+                  title "cytochrome c oxidase subunit 1 (mitochondrion)
+ [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 512 ,
+                  seq-data
+                    ncbieaa "MINRWFFSTNHKDIGTLYFILGAWASAIGTSMSVIIRSELSAPGNLIGD
+DQIYNVMVTAHAFVMIFFMVMPIMIGGFGNWLVPLMLGSPDMAFPRMNNMSFWLLPPSLSLLLMSGLVESGVGTGWTV
+YPPLAGAVGHSGGSVDLAIFSLHLAGASSILGAINFISTVLNMRTPGVSMDRVPLFVWSVFITAILLLLSLPVLAGAI
+TMLLTDRNLNTSFFDPSGGGDPILYQHLFWFFGHPEVYILILPGFGLISHIVSEESGKKETFGVLGMIYAMLAIGVLG
+FIVWAHHMFTVGMDVDTRAYFTSATMIIAVPTGIKVFSWLGTLQGGNLSFSLSMIWALGFIFLFTVGGLTGVMLANSS
+IDVVLHDTYYVVAHFHYVLSMGAVFGIFAGFTHWYPLFTGLTLNSVYGKVHFYTMFLGVNLTFFPQHFLGLNGMPRRY
+SDYPDSFSSWNMVSSLGSYLSVLAMIFFIMMILESVVTKRQSLFSSSLSTSLDWAHPYPPADHSYSDVPMLMN" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "cytochrome c oxidase subunit 1" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 511 ,
+                              id
+                                local
+                                  str "Hyalella_solida_2" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_3" } ,
+                descr {
+                  title "cytochrome c oxidase subunit 2 (mitochondrion)
+ [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 226 ,
+                  seq-data
+                    ncbieaa "MPTWASLNFQDSASPGMEQLVFFHDFTMIVVTLITVLVGSSMIFICGYK
+LTNRILLQEQSVEIIWTVFPVFILLSIALPSLKALYLLDDPFSPSLTIKAVGHQWYWSYEYSDFPGIEFDSYMVLEES
+TNYSARLLETDNSLVLPSLSQIRVIVTGGDVIHSWAVPSLGVKADAVPGRLNQIMMYINRSGIFYGQCSEICGANHSF
+MPIKVEAVPMPYFINWAMKMN" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "cytochrome c oxidase subunit 2" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 225 ,
+                              id
+                                local
+                                  str "Hyalella_solida_3" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_4" } ,
+                descr {
+                  title "ATP synthase F0 subunit 8 (mitochondrion) [Hyalella
+ solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 51 ,
+                  seq-data
+                    ncbieaa "MPQMAPMLWFILFFYFILLAVILMNLVFFDPLCNNNLKNSSKELIKLNW
+KW" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "ATP synthase F0 subunit 8" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 50 ,
+                              id
+                                local
+                                  str "Hyalella_solida_4" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_5" } ,
+                descr {
+                  title "ATP synthase F0 subunit 6 (mitochondrion) [Hyalella
+ solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 223 ,
+                  seq-data
+                    ncbieaa "MMTNLFAIFDPASPNFFSSNWTASLLFILLYPMVQWAVGSRYISMIMNF
+KFYLFSEFKPIVKKTSFILLISVSIMLFIMFNNVMGLFPYVFTSSAHLSFSLSFGLTSWVGLMLYGWVYNYNNLLVHL
+IPQGTPAGLMPFMVIIETVSNVIRPGTLAVRLSANMIAGHLLLSLLSSAFMVSPLMGVPLLMGAEFMLMGLESAVAFI
+QSYVFSVLLTLYVAEFTD" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "ATP synthase F0 subunit 6" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 222 ,
+                              id
+                                local
+                                  str "Hyalella_solida_5" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_6" } ,
+                descr {
+                  title "cytochrome c oxidase subunit 3 (mitochondrion)
+ [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 262 ,
+                  seq-data
+                    ncbieaa "MTTHSNHPYHLVEKSPWPLIASVSAMIMVSGLVKWFHEFDSSLLLLGVI
+SVFITSAQWWRDVSREASFQGLHTTKVVVGLRWGMLLFIVSEVLFFFSFFWAFFHSSLSATMEIGAEWPPTGIKALNP
+FQVPLLNTAILLASGVTVTWAHHAILENNHSQATQGLLSTVLLGGYFSGLQGFEYLESCFSISDSVYGTTFFVATGFH
+GLHVIIGSTFLMVNFYRLLLGHFSSSHHNGVEAAIWYWHFVDVVWLFLYVSIYWWGS" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "cytochrome c oxidase subunit 3" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 261 ,
+                              id
+                                local
+                                  str "Hyalella_solida_6" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_7" } ,
+                descr {
+                  title "NADH dehydrogenase subunit 3 (mitochondrion)
+ [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 117 ,
+                  seq-data
+                    ncbieaa "MINMMGLTILFFFISSLLWFLALSLGLKTDKSREKVSPFECGFDPFKKS
+RVPFSLRFFLVTVIFLVFDVEVALLFPLGLLKITSDVLFVGLSGLVLILVLSLGLIHEWNQGGLNWIY" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "NADH dehydrogenase subunit 3" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 116 ,
+                              id
+                                local
+                                  str "Hyalella_solida_7" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_8" } ,
+                descr {
+                  title "NADH dehydrogenase subunit 5 (mitochondrion)
+ [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 570 ,
+                  seq-data
+                    ncbieaa "MKLMNNVYKIFCLLTAVIMASSLVMIFIFIYKEKTIILDWEIMMFNSSS
+ITMSILIDWMSLIFLSTVMTITASICLFSSYYMREEMNKIRFMLLLMLFVASMMFLIISPNLISLLLGWDGLGLTSYA
+LVIYYQNESACNAGMLTLLSNRIGDVCILMVIGVLSYAGSWNFFCMETTEYKMICFFIILAAMTKSAQIPFSAWLPAA
+MAAPTPVSALVHSSTLVTAGVYLIIRFFHILEKSLFLQGLLIISVLTMLMAGWGANFETDLKKIVALSTLSQLGLMMM
+ILSMGMKNIAFFHMISHAMFKSTLFMSAGVMIHMTNSTQDSRFMGGMWVSSPVLMTVFSMMNLSLLGFPFLSGFFSKD
+LTLDFAISNLFNSTILMLIIMATGMTVAYSLRVIYLAVTNNGNSKSAYNLEDSDNSVIISVSVLFFMGILVGYMFSWA
+VMWTPYSLMMTNLNKYYILCIMFISGMVTMLTLNHQKIINYTFNLTLITTSSSKMWNLPFLTTKNLTKFALMAGLNSS
+QLMDKGWLETYPPKKMTFVLSYYSSMLQKGQVTVLISAYLVTFSLLIFLCLLY" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "NADH dehydrogenase subunit 5" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 569 ,
+                              id
+                                local
+                                  str "Hyalella_solida_8" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_9" } ,
+                descr {
+                  title "NADH dehydrogenase subunit 4 (mitochondrion)
+ [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 436 ,
+                  seq-data
+                    ncbieaa "MLKILISALICGLIFNWGETLFFILFVSFILLLNKPSTLEHCYMNLEFD
+YFSWALTLLSLWIVALSMISSTDNVNSSKKSKFYLFIMVCMLVSLSFTFTISNMATFYLLFETCLIPILIIILGWGYQ
+PERMQAGVYLLFYTIFGSLPLLIIILQAIKLSGSGYMFFTPFFLTGTMSAFCLFAAFLVKFPMYGVHLWLLKAHVEAP
+VAGSMILAGVLLKLGGFGLIRVFSLLDSSYYLMKELVISISVWGGVLVSVNCLRYTDMKLLIASSSVVHMSTCVAALF
+IMTEWGVKGCLMMMLAHGVCSSGLFFLANSVYQRTNSRSMLVSKGLLNLAPMMSLCWFLLLAANMAAPPTINLGSEIM
+LLISLISWSHTVIPLLILLTFFSVTYSVYLFSLSQHGVFNKSKSALTHNSSLEYLNVFLHWIPLNALILNMMFMF" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "NADH dehydrogenase subunit 4" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 435 ,
+                              id
+                                local
+                                  str "Hyalella_solida_9" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_10" } ,
+                descr {
+                  title "NADH dehydrogenase subunit 4L (mitochondrion)
+ [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 97 ,
+                  seq-data
+                    ncbieaa "MWYYLIILTLFMLCMSLYAFMFNHSHLLNSLLSLEMMSVTIYFLISVVF
+TSLGLELFYLLFFLVMIVCEGVLGLSLLISLVHSHGEDYFKLFNFIQC" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "NADH dehydrogenase subunit 4L" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 96 ,
+                              id
+                                local
+                                  str "Hyalella_solida_10" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_11" } ,
+                descr {
+                  title "NADH dehydrogenase subunit 6 (mitochondrion)
+ [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 161 ,
+                  seq-data
+                    ncbieaa "MLLISLSISVVLACMFTQVSSPLGLAVIVVMFSLFISMNMSLICSTSWF
+SLLLFMLFLSGMMIIFIYVCSLASNETHFYSFSVIYLVLIFMVLITFSPVINSLMTVGSDLLSKTDTCILMHKVYSFS
+VYLFTLALIIYLLITLIVAVKICTVSDGPVRTKK" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "NADH dehydrogenase subunit 6" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 160 ,
+                              id
+                                local
+                                  str "Hyalella_solida_11" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_12" } ,
+                descr {
+                  title "cytochrome b (mitochondrion) [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 377 ,
+                  seq-data
+                    ncbieaa "MLTQYFKKNPLFNVFDSTLVSLPAPSNISSFWNFGSLLSGCLVVQMVSG
+ILLASSYTASMDISFNMIIKIMEASDKGWLIRYLHANGASLFFLCLYIHVGRGIYYGSYLYKHTWNIGVSILLLTMAA
+AFLGYVLPVNQMSFWGASVITNLFSEVPYIGANLVQFIWGGVSVDSPTICRFFAFHFLIPFIILALVVVHITLLHLTG
+SSNPMGVASSLDKMGFHSYFSFKDALGVVMVSFLFSLICIYWPLVLGDDENFNVADPSVTPHHIQPEWYFLFAYAILR
+SIPNKLGGVIALALSVLMLYLMPITFLSKMKSSVFYPLNKSLFWFFIMSVIMLTWIGMCPVEVPYVLTGQVFTFFYFL
+FYLFNPVLMLIWDKME" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "cytochrome b" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 376 ,
+                              id
+                                local
+                                  str "Hyalella_solida_12" } } } } } } ,
+              seq {
+                id {
+                  local
+                    str "Hyalella_solida_13" } ,
+                descr {
+                  title "NADH dehydrogenase subunit 1 (mitochondrion)
+ [Hyalella solida]" ,
+                  molinfo {
+                    biomol peptide ,
+                    tech concept-trans } } ,
+                inst {
+                  repr raw ,
+                  mol aa ,
+                  length 312 ,
+                  seq-data
+                    ncbieaa "MMLSTFKVMVIYAILIIMVLVSVAFITLMERKVLGSSQIRLGPTVVGIW
+GVLQPFADAVKLFNKESLFLRSINSFVYLISPIFSLFFMLVIWTLLPLEAGGLNFNFTLVLFICISSLAVYPVISSGW
+ASNCKYSVLGSLRAVAQMISYEVSLTVVLLTIIWLNSSFNLEEALETQMFIWNALFLAPLMLIWKITSLAETNRTPYD
+FSEGESELVSGFNTEYAAGSFSLLFMAEYGNIIFMSLLFVLLFLSSGISYTIMLKTMLVSFLFIWVRATLPRYRYDKL
+MYLAWKTLLPVSLFMLMFYFAVGYSMMFY" } ,
+                annot {
+                  {
+                    data
+                      ftable {
+                        {
+                          data
+                            prot {
+                              name {
+                                "NADH dehydrogenase subunit 1" } } ,
+                          location
+                            int {
+                              from 0 ,
+                              to 311 ,
+                              id
+                                local
+                                  str "Hyalella_solida_13" } } } } } } } ,
+            annot {
+              {
+                data
+                  ftable {
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } ,
+                          code-break {
+                            {
+                              loc
+                                pnt {
+                                  point 2043 ,
+                                  id
+                                    local
+                                      str "Hyalella_solida" } ,
+                              aa
+                                ncbieaa 42 } } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_1" ,
+                      location
+                        int {
+                          from 1062 ,
+                          to 2043 ,
+                          strand plus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_2" ,
+                      location
+                        int {
+                          from 2170 ,
+                          to 3708 ,
+                          strand plus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_3" ,
+                      location
+                        int {
+                          from 3769 ,
+                          to 4449 ,
+                          strand plus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_4" ,
+                      location
+                        int {
+                          from 4574 ,
+                          to 4729 ,
+                          strand plus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_5" ,
+                      location
+                        int {
+                          from 4723 ,
+                          to 5394 ,
+                          strand plus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_6" ,
+                      location
+                        int {
+                          from 5402 ,
+                          to 6190 ,
+                          strand plus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_7" ,
+                      location
+                        int {
+                          from 6191 ,
+                          to 6544 ,
+                          strand plus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } ,
+                          code-break {
+                            {
+                              loc
+                                pnt {
+                                  point 6735 ,
+                                  strand minus ,
+                                  id
+                                    local
+                                      str "Hyalella_solida" } ,
+                              aa
+                                ncbieaa 42 } } } ,
+                      comment "TAA stop codon is completed by the addition of
+ 3' A residues to the mRNA" ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_8" ,
+                      location
+                        int {
+                          from 6735 ,
+                          to 8445 ,
+                          strand minus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } ,
+                          code-break {
+                            {
+                              loc
+                                pnt {
+                                  point 8508 ,
+                                  strand minus ,
+                                  id
+                                    local
+                                      str "Hyalella_solida" } ,
+                              aa
+                                ncbieaa 42 } } } ,
+                      comment "TAA stop codon is completed by the addition of
+ 3' A residues to the mRNA" ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_9" ,
+                      location
+                        int {
+                          from 8508 ,
+                          to 9816 ,
+                          strand minus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_10" ,
+                      location
+                        int {
+                          from 9810 ,
+                          to 10103 ,
+                          strand minus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_11" ,
+                      location
+                        int {
+                          from 10578 ,
+                          to 11063 ,
+                          strand plus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_12" ,
+                      location
+                        int {
+                          from 11063 ,
+                          to 12196 ,
+                          strand plus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } ,
+                    {
+                      data
+                        cdregion {
+                          frame one ,
+                          code {
+                            id 5 } } ,
+                      product
+                        whole
+                          local
+                            str "Hyalella_solida_13" ,
+                      location
+                        int {
+                          from 12267 ,
+                          to 13205 ,
+                          strand minus ,
+                          id
+                            local
+                              str "Hyalella_solida" } } } } } } } } } }

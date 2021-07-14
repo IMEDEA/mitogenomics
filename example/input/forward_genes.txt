@@ -1,0 +1,1 @@
+CR1,C,M,nad2,W,G,cox1,L2,cox2,K,D,atp8,atp6,cox3,nad3,S1,E,I,A,N,R,T,nad6,cob,S2
