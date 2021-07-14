@@ -47,8 +47,9 @@ The aln2table.py script takes as input
 
 a) A fasta alignment (contig or assembly) file (--fasta) including the complete nucleotide sequence of the mitogenome
 as well as the sequence of each mapped gene (generally 37), with a single line per gene sequence.
-	See example in /mitogenomics-master/data_examples/Hyalella_solida2319A_assembly.fas
-	See FAQs for the correct naming of genes.
+
+See example in /mitogenomics-master/data_examples/Hyalella_solida2319A_assembly.fas
+See FAQs for the correct naming of genes.
 
 b) A plain text file (--genes) listing genes that are encoded in forward orientation with respect to the sequence being submitted, separated by commas and without spaces.
 This information allows the script to correctly reverse/complement the nucleotide sequence of genes encoded on the opposite strand prior to annotation. Control regions, if any (see FAQs below), should be also included in the gene file (--genes), since they are generally annotated in forward orientation. 
@@ -58,8 +59,8 @@ This information allows the script to correctly reverse/complement the nucleotid
 c) The last argument (--code) parses the number of the appropriated mitochondrial genetic code
 (e.g. 2 for vertebrate mitochondrial code, 5 for invertebrate mitochondrial code)
 
-	Visit this web page for a complete list of genetic codes https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
-	See FAQs below for a summary of start and stop codons of different mitochondrial genetic codes.
+Visit this web page for a complete list of genetic codes https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
+See FAQs below for a summary of start and stop codons of different mitochondrial genetic codes.
 
 The example script can be run using the following example:
 
@@ -69,7 +70,7 @@ aln2tbl.py --fasta Hyalella_solida2319A_assembly.fas --genes forward_genes.txt -
 The output file is saved as plain text with tbl extension to be readily identified as a feature table. 
 
 
-FAQs/FAQs/FAQs/:
+# FAQs/FAQs/FAQs/:
 
 1) The script is apparently missing the correct python interpreter!
 
