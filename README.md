@@ -5,7 +5,9 @@ There are three scripts
 
 aln2tbl.py -> Converts an assembly of individual genes mapped to the mitogenome sequence in fasta format into a feature table (python 3 version).
 
-aln2tbl-legacy.py  -> Maps individual genes to a mitogenome sequence (pyhton 2 - this will not be maintained).
+aln2tbl-legacy.py ->  python 2 version of the previous script - (this will not be maintained).
+
+mitos2fasta -> Maps individual genes to a mitogenome sequence (python 3 version).
 
 # This software is released under the license GNU GPLv3
 
