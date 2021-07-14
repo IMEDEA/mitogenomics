@@ -87,10 +87,14 @@ installations are available, the full path to python3 interpreter can be added t
 Gene names must comply with the names proposed by Boore and Brown (2000) as in most recent GenBank annotations.
 
 Protein coding gene names (CDS) are as follows: atp6, atp8, cob, cox1, cox2, cox3, nad1, nad2, nad3, nad4, nad4L, nad5 and nad6.  
+
 Accepted names for ribosomal genes are rrnL (or 16S) and rrnS (or 12S) for the large and small ribosomal subunit, respectively.  
+
 tRNAs are indicated using the single letter corresponding to the encoded tRNA (e.g. M for methionine).  
+
 The two tRNA genes that are generally present for Leucine and Serine must be differentiated by post-pending the correct
 number to the gene name following the same convention used in MITOS: L1 for tRNALeu(CUN), L2 for tRNALeu(UUR), S1 for tRNASer(AGN) and S2 for tRNASer(UCN)). 
+
 The control region, if included, must be named 'control_region' or 'CR'. Up to two codon regions can be annotated ‘CR1’ and ‘CR2’.
 
 **3) Should all spacers be annotated as Control Regions?**
