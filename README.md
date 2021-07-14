@@ -7,11 +7,11 @@ aln2tbl.py -> Converts an assembly of individual genes mapped to the mitogenome 
 
 aln2tbl-legacy.py ->  python 2 version of the previous script - (this will not be maintained).
 
-mitos2fasta -> Maps individual genes to a mitogenome sequence (python 3 version).
+mitos2fasta.py -> Maps individual genes to a mitogenome sequence (python 3 version).
 
-# This software is released under the license GNU GPLv3
+**This software is released under the license GNU GPLv3.**
 
-# This software is provided as is without warranty of any kind.
+**This software is provided as is without warranty of any kind.**
 
 # Dependencies
 
@@ -29,7 +29,7 @@ and other similar software.
 
 People wishing to contribute to the software, report issues or seek support can contact Joan Pons at jpons@imedea.uib-csic.es
 
-#Usage
+USAGE:
 
 Simply copy the script to your executable path and use it as follows
 
@@ -37,7 +37,7 @@ Simply copy the script to your executable path and use it as follows
 aln2tbl.py --fasta My_assembly.fas --genes My_forward_genes.txt --code integer > My_feature_table.tbl
 ```
 
-Parameters:
+**PARAMETERS:**
 
 **-f, --fasta** -> input text file with assembly in fasta format: example file in /mitogenomics-master/data_examples/Hyalella_solida2319A_assembly.fas
 
@@ -45,7 +45,7 @@ Parameters:
 
 **-c, --code** -> Number (integer) of the appropriate mitochondrial Genetic Code Translation Table: vertebrate (2), yeast (3), mold, protozoan and coelenterate (4), invertebrate (5), echinoderm and flatworm (9), ascidian (13)
 
-The aln2table.py script takes as input
+EXPLANATION: The aln2table.py script takes as input
 
 **a) A fasta alignment (contig or assembly) file (--fasta) including the complete nucleotide sequence of the mitogenome
 as well as the sequence of each mapped gene (generally 37), with a single line per gene sequence.**
@@ -64,7 +64,7 @@ This information allows the script to correctly reverse/complement the nucleotid
 Visit this web page for a complete list of genetic codes https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
 See FAQs below for a summary of start and stop codons of different mitochondrial genetic codes.
 
-The example script can be run using the following example:
+# The example script can be run using the following example:
 
 ```
 aln2tbl.py --fasta Hyalella_solida2319A_assembly.fas --genes forward_genes.txt --code 5 > Hyalella_solida2319A.tbl
