@@ -103,7 +103,7 @@ According to NCBI standards, start and stop codons for different genetic codes f
        START CODONS for Met = ["ATA","ATG","GTG"]
        STOP CODONS = ["TAA","TAG"]
 
-    Mold, Protozoan, and Coelenterate Mitochondrial Code (genetic_code=4) :
+   Mold, Protozoan, and Coelenterate Mitochondrial Code (genetic_code=4) :
        START CODONS for Met = ["TTA","TTG","CTG","ATT","ATC","ATA","ATG","GTG"]
        STOP CODONS  = ["TAA","TAG"]
 
