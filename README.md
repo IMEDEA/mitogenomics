@@ -1,7 +1,7 @@
 
 # Provided versions
 
-There are three scripts 
+There are three scripts: 
 
 aln2tbl.py -> Converts an assembly of individual genes mapped to the mitogenome sequence in fasta format into a feature table (python 3 version).
 
@@ -17,10 +17,20 @@ mitos2fasta.py -> Maps individual genes to a mitogenome sequence (python 3 versi
 
 Download scripts and examples from https://github.com/IMEDEA/mitogenomics
 
-In linux
+In linux terminal
 
 ```
 git clone https://github.com/IMEDEA/mitogenomics
+```
+
+Make scripts executable
+
+```
+cd mitogenomics
+```
+
+```
+chmod +x aln2tbl.py mitos2fasta.py
 ```
 
 If git is not installed visit https://github.com/git-guides/install-git  
@@ -52,9 +62,11 @@ mitos2fasta.py -m My_mitogenome_sequence.fas -g My_mitos2_genes.fas -c Y > My_as
 
 **-c CONVERTFILE, --convertfile** -> Gene names (fasta headers) from MITOS2 will be simplified and made compliant with aln2tbl. Yes=Y No=N
 
-Example: 
-mitos2fasta.py -m Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g Hyalella_solida2319A_genes_manually_curated.fas -c Y > Hyalella_solida2319A_assembly.fas
+Example:
 
+```
+mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/input/Hyalella_solida2319A_genes_manually_curated.fas -c Y > Hyalella_solida2319A_assembly.fas
+```
 
 # aln2tbl.py
 
