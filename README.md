@@ -23,6 +23,9 @@ In linux terminal
 git clone https://github.com/IMEDEA/mitogenomics
 ```
 
+If git is not installed visit https://github.com/git-guides/install-git  
+which is available for any OS
+
 Make scripts executable
 
 ```
@@ -32,9 +35,6 @@ cd mitogenomics
 ```
 chmod +x aln2tbl.py mitos2fasta.py
 ```
-
-If git is not installed visit https://github.com/git-guides/install-git  
-which is available for any OS
 
 # Dependencies
 
