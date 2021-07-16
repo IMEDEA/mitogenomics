@@ -34,7 +34,11 @@ This software uses Biopython (tested version 1.78-2)
 pip install biopython
 ```
 
-# Usage mitos2fasta
+# mitos2fasta.py
+
+**USAGE:**
+
+Simply copy the script to your executable path and use it as follows
 
 ```
 mitos2fasta.py -m My_mitogenome_sequence.fas -g My_mitos2_genes.fas -c Y > My_assembly.fas
@@ -52,7 +56,7 @@ Example:
 mitos2fasta.py -m Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g Hyalella_solida2319A_genes_manually_curated.fas -c Y > Hyalella_solida2319A_assembly.fas
 
 
-# aln2tbl
+# aln2tbl.py
 
 This python script was designed for those modifying manually the genes mapped on the mitochondrial genome sequence and then
 automatically generate a new table fatures with updated 5' and 3' ends. It's a perfect tool to correct annotations from MITOS2
