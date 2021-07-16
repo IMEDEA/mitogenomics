@@ -52,14 +52,14 @@ People wishing to contribute to the software, report issues or seek support can 
 Simply copy the script to your executable path and use it as follows
 
 ```
-aln2tbl.py --fasta My_assembly.fas --genes My_forward_genes.txt --code integer > My_feature_table.tbl
+aln2tbl.py --fasta ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas --genes ./example/input/forward_genes.txt --code integer > My_feature_table.tbl
 ```
 
 **PARAMETERS:**
 
-**-f, --fasta** -> input text file with assembly in fasta format: example file in /mitogenomics-master/data_examples/Hyalella_solida2319A_assembly.fas
+**-f, --fasta** -> input text file with assembly in fasta format: example file in /example/output/Hyalella_solida2319A_assembly_manually_curated.fas
 
-**-g, --genes** -> input text file with list of gene names coded in forward strand (plus or positive strand) in a single line and separated by commas: example file in /mitogenomics-master/data_examples/forward_genes.txt
+**-g, --genes** -> input text file with list of gene names coded in forward strand (plus or positive strand) in a single line and separated by commas: example file in /example/input/forward_genes.txt
 
 **-c, --code** -> Number (integer) of the appropriate mitochondrial Genetic Code Translation Table: vertebrate (2), yeast (3), mold, protozoan and coelenterate (4), invertebrate (5), echinoderm and flatworm (9), ascidian (13)
 
@@ -68,7 +68,7 @@ EXPLANATION: The aln2table.py script takes as input
 **-f**	A fasta alignment (contig or assembly) file (--fasta) including the complete nucleotide sequence of the mitogenome
 as well as the sequence of each mapped gene (generally 37), with a single line per gene sequence.
 
-	See example in /mitogenomics-master/data_examples/Hyalella_solida2319A_assembly.fas
+	See example in /example/output/Hyalella_solida2319A_assembly_manually_curated.fas
 
 See FAQs for the correct naming of genes.
 
@@ -76,7 +76,7 @@ See FAQs for the correct naming of genes.
 This information allows the script to correctly reverse/complement the nucleotide sequence of genes encoded on the opposite strand prior to annotation.
 Control regions, if any (see FAQs below), should be also included in the gene file (--genes), since they are generally annotated in forward orientation.
 
-	See example in /mitogenomics-master/data_examples/forward_genes.txt
+	See example file in /example/input/forward_genes.txt
 
 **-c**	The last argument (--code) parses the number of the appropriated mitochondrial genetic code
 (e.g. 2 for vertebrate mitochondrial code, 5 for invertebrate mitochondrial code).
@@ -87,10 +87,11 @@ See FAQs below for a summary of start and stop codons of different mitochondrial
 # The example script can be run using the following example:
 
 ```
-aln2tbl.py --fasta Hyalella_solida2319A_assembly.fas --genes forward_genes.txt --code 5 > Hyalella_solida2319A.tbl
+aln2tbl.py --fasta ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas --genes ./example/input/forward_genes.txt --code integer > My_feature_table.tbl
 ```
 The output file is saved as plain text with tbl extension to be readily identified as a feature table. 
 
+Compare My_feature_table.tbl with our output file /example/output/Hyalella_solida2319A.tbl
 
 # FAQs/FAQs/FAQs/:
 
@@ -192,7 +193,7 @@ No. If the genome is circular, we foster the good practice of linearizing the se
 This occurrence must be manually annotated in the feature table.
 
 
-# Full pipeline example (example files in /mitogenomics/data_examples/)
+# Full pipeline example (example files in /example/)
 
 1) Send mitogenome sequence "/example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fasta" to MITOS2
 (http://mitos2.bioinf.uni-leipzig.de/index.py)
@@ -200,27 +201,27 @@ This occurrence must be manually annotated in the feature table.
 	Select correct genetic code (Invertebrate for this example) and in advanced setting unselect OH, OL, and intron features.
 	Also unselect circular since this example is not a complete mitogenome as we failed to sequence part of control region. 
 
-2) From MITOS2 output download fasta file sequences of annotated genes (FAS file link). Rename file to "./example/output/Hyalella_solida2319A_genes_mitos2_output.fas"
+2) From MITOS2 output download fasta file sequences of annotated genes (FAS file link). Rename file to "/example/output/Hyalella_solida2319A_genes_mitos2_output.fas"
 
 3) build assembly (contig) aligning/mapping genes relative to mitogenome sequence with mitos2fasta python script
 ```
-./mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/output/Hyalella_solida2319A_genes_mitos2_output.fas -c Y > ./example/output/Hyalella_solida2319A_assembly.fas
+./mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/output/Hyalella_solida2319A_genes_mitos2_output.fas -c Y > Hyalella_solida2319A_assembly.fas
 ```
 
 4) If necessary (generally it is so) manually check and modify 5' and 3' ends of genes and add control regions in Seaview or AliView as we did manually.
-"./example/output/Hyalella_solida2319A_assembly_manually_curated.fas"
+"/example/output/Hyalella_solida2319A_assembly_manually_curated.fas"
 
 5) build feature table file with aln2tbl python script
 
 ```
-./aln2tbl.py -f ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > ./example/output/Hyalella_solida2319A.tbl
+./aln2tbl.py -f ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > Hyalella_solida2319A.tbl
 ```
 
 6) build .sqn file to submit annotated mitogenome to GenBank/ENA and check/validade for errors
 ```
 tbl2asn -i ./example/input/Hyalella_solida2319A_linear_tbl2asn_input.fas -f ./example/output/Hyalella_solida2319A.tbl -t ./example/input/template.sbt -a s -V vb -T
 ```
-	output files:
+	compare your output files with our output files:
 				file in GenBank format "./example/output/Hyalella_solida2319A_linear_tbl2asn_input.gbf"
 				file in sqn format to submit to GenBank (or others repositories such as ENA and DDBJ)  "./example/output/Hyalella_solida2319A_linear_tbl2asn_input.sqn"
 				file with ERROR and WARNING "./example/output/Hyalella_solida2319A_linear_tbl2asn_input.val"
