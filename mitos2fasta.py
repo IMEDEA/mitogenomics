@@ -10,7 +10,7 @@ import re
 
 
 def get_args():
-    parser = argparse.ArgumentParser(prog = "aln.py", usage = "mitos2fasta.py --mitofile My_mitogenome_sequence.fas --genefile My_mitos2_genes.fas --convertfile Y/N > My_assembly.fas", description = "Description: align genes to mitogenome sequence reference")
+    parser = argparse.ArgumentParser(prog = "mitos2fasta.py", usage = "mitos2fasta.py --mitofile My_mitogenome_sequence.fas --genefile My_mitos2_genes.fas --convertfile Y/N > My_assembly.fas", description = "Description: align genes to mitogenome sequence reference. Type on terminal "mitos2fasta -h" for further information"
     parser.add_argument("-m", "--mitofile", required = True, help = "Input file with mitogenome sequence in fasta format, as submitted to MITOS")
     parser.add_argument("-g", "--genesfile", required = True, help = "Input file with MITOS output with individual genes in fasta format")
     parser.add_argument("-c", "--convertfile", required = True, help = "Gene names (fasta headers) from MITOS will be simplified and made compliant with aln2tbl. Yes=Y No=N")
