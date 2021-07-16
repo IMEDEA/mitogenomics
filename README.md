@@ -21,6 +21,24 @@ This software uses Biopython (tested version 1.78-2)
 pip install biopython
 ```
 
+# Usage mitos2fasta
+
+```
+mitos2fasta.py -m My_mitogenome_sequence.fas -g My_mitos2_genes.fas -c Y > My_assembly.fas
+```
+
+**PARAMETERS:**
+
+**-m MITOFILE --mitofile** -> Input file with Mitogenome sequence in fasta format, as submitted to MITOS2
+
+**-g GENESFILE, --genesfile** -> Input file with MITOS2 output with individual genes in fasta format
+
+**-c CONVERTFILE, --convertfile** -> Gene names (fasta headers) from MITOS2 will be simplified and made compliant with aln2tbl. Yes=Y No=N
+
+Example: 
+mitos2fasta.py -m Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g Hyalella_solida2319A_genes_manually_curated.fas -c Y > Hyalella_solida2319A_assembly.fas
+
+
 # aln2tbl
 
 This python script was designed for those modifying manually the genes mapped on the mitochondrial genome sequence and then
@@ -173,24 +191,6 @@ No. If the genome is circular, we foster the good practice of linearizing the se
 
 This occurrence must be manually annotated in the feature table.
 
-
-
-# Usage mitos2fasta
-
-```
-mitos2fasta.py -m My_mitogenome_sequence.fas -g My_mitos2_genes.fas -c Y > My_assembly.fas
-```
-
-**PARAMETERS:**
-
-**-m MITOFILE --mitofile** -> Input file with Mitogenome sequence in fasta format, as submitted to MITOS2
-
-**-g GENESFILE, --genesfile** -> Input file with MITOS2 output with individual genes in fasta format
-
-**-c CONVERTFILE, --convertfile** -> Gene names (fasta headers) from MITOS2 will be simplified and made compliant with aln2tbl. Yes=Y No=N
-
-Example: 
-mitos2fasta.py -m Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g Hyalella_solida2319A_genes_manually_curated.fas -c Y > Hyalella_solida2319A_assembly.fas
 
 # Full pipeline example (example files in /mitogenomics/data_examples/)
 
