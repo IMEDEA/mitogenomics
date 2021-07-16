@@ -13,6 +13,19 @@ mitos2fasta.py -> Maps individual genes to a mitogenome sequence (python 3 versi
 
 **This software is provided as is without warranty of any kind.**
 
+# Download
+
+Download scripts and examples from https://github.com/IMEDEA/mitogenomics
+
+In linux
+
+```
+git clone https://github.com/IMEDEA/mitogenomics
+```
+
+If git is not installed visit https://github.com/git-guides/install-git  
+which is available for any OS
+
 # Dependencies
 
 This software uses Biopython (tested version 1.78-2)
