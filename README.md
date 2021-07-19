@@ -143,6 +143,21 @@ The output file is saved as plain text with tbl extension to be readily identifi
 
 Compare My_feature_table.tbl with our output file /example/output/Hyalella_solida2319A.tbl
 
+
+# Full pipeline example (example files in /example/)
+
+**Input files are provided in the .../mitogenomics/example/input folder**
+
+Hyalella_solida_mitogenome.fas		Mitogenome sequence in fasta format
+
+Hyalella_solida_genes_mitos2.fas		MITOS2 output, automatic annotation of the genome.
+
+Hyalella_solida_assembly_manually_curated.fas		MITOS2 output manually curated in an alignment editor (SeaView or Aliview). In this example, duplicated genes have been removed or merged, the boundaries of some genes have been corrected and names of gene names have been made compliant (see FAQs)
+
+forward_genes.txt		List of genes in forward orientation
+
+submission_template.sbt		Submission information created using the NCBI web function at https://submit.ncbi.nlm.nih.gov/genbank/template/submission/
+
 **Pipeline steps**
 
 1) Send mitogenome sequence "/example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fasta" to MITOS2
@@ -294,19 +309,4 @@ No. If the genome is circular, we foster the good practice of linearizing the se
 **10) The genome is incomplete and missing an inner portion of a single gene**
 
 This occurrence must be manually annotated in the feature table.
-
-
-# Full pipeline example (example files in /example/)
-
-**Input files are provided in the .../mitogenomics/example/input folder**
-
-Hyalella_solida_mitogenome.fas		Mitogenome sequence in fasta format
-
-Hyalella_solida_genes_mitos2.fas		MITOS2 output, automatic annotation of the genome.
-
-Hyalella_solida_assembly_manually_curated.fas		MITOS2 output manually curated in an alignment editor (SeaView or Aliview). In this example, duplicated genes have been removed or merged, the boundaries of some genes have been corrected and names of gene names have been made compliant (see FAQs)
-
-forward_genes.txt		List of genes in forward orientation
-
-submission_template.sbt		Submission information created using the NCBI web function at https://submit.ncbi.nlm.nih.gov/genbank/template/submission/
 
