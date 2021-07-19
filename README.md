@@ -137,7 +137,7 @@ Copy and paste the next example in your terminal (~/mitogenomics)
 ```
 The output file is saved as plain text with tbl extension to be readily identified as a feature table. 
 
-Compare Hyalella_solida_.tbl with our output file /example/output/Hyalella_solida_feature_table.tbl
+Compare your Hyalella_solida_feature_table.tbl with our output file /example/output/Hyalella_solida_feature_table.tbl
 
 
 # Full pipeline example (example files in /example/)
