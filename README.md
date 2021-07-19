@@ -134,7 +134,7 @@ Control regions, if any (see FAQs below), should be also included in the gene fi
 Visit this web page for a complete list of genetic codes https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
 See FAQs below for a summary of start and stop codons of different mitochondrial genetic codes.
 
-# The example script can be run using the following example:
+**The example script can be run using the following example:**
 
 ```
 aln2tbl.py --fasta ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas --genes ./example/input/forward_genes.txt --code 5 > My_feature_table.tbl
