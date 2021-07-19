@@ -77,9 +77,9 @@ mydic = {
 
 
 def get_args():
-    parser = argparse.ArgumentParser(prog = "aln2tbl.py", usage = "aln2tbl.py --fasta My_assembly.fas --genes My_forward_genes.txt --code integer > My_feature_table.tbl", description = "Description: convert an assembly in fasta format into a feature table format. Type on terminal "aln2tbl.py -h" for further information. For additional information visit https://github.com/IMEDEA/mitogenomics or email Joan Pons at jpons@imedea.uib-csic.es")
-    parser.add_argument("-f", "--fasta", required = True, help = "input text file with assembly in fasta format: example file in /mitogenomics-master/data_examples/Hyalella_solida2319A_assembly.fas")
-    parser.add_argument("-g", "--genes", required = True, help = "input text file with list of gene names coded in forward strand (plus or positive strand) in a single line and separated by commas: example file in /mitogenomics-master/data_examples/pos_genes.txt")
+    parser = argparse.ArgumentParser(prog = "aln2tbl.py", usage = "aln2tbl.py --fasta My_assembly.fas --genes My_forward_genes.txt --code integer > My_feature_table.tbl", description = "Description: convert an assembly in fasta format into a feature table format. Type on terminal aln2tbl.py -h for further information. For additional information visit https://github.com/IMEDEA/mitogenomics or email Joan Pons at jpons@imedea.uib-csic.es")
+    parser.add_argument("-f", "--fasta", required = True, help = "input text file with assembly in fasta format: example file in /example/output/Hyalella_solida2319A_assembly_manually_curated.fas")
+    parser.add_argument("-g", "--genes", required = True, help = "input text file with list of gene names coded in forward strand (plus or positive strand) in a single line and separated by commas: example file in /example/input/forward_genes.txt")
     parser.add_argument("-c", "--code", type = int, required = True, help = "Number (integer) of the appropriate mitochondrial Genetic Code Translation Table: vertebrate (2), yeast (3), mold, protozoan and coelenterate (4), invertebrate (5), echinoderm and flatworm (9), ascidian (13)")
     args = parser.parse_args()
     

@@ -81,7 +81,7 @@ People wishing to contribute to the software, report issues or seek support can 
 Simply copy the script to your executable path and use it as follows
 
 ```
-aln2tbl.py --fasta ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas --genes ./example/input/forward_genes.txt --code integer > My_feature_table.tbl
+aln2tbl.py --fasta ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas --genes ./example/input/forward_genes.txt --code 5 > My_feature_table.tbl
 ```
 
 **PARAMETERS:**
@@ -116,7 +116,7 @@ See FAQs below for a summary of start and stop codons of different mitochondrial
 # The example script can be run using the following example:
 
 ```
-aln2tbl.py --fasta ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas --genes ./example/input/forward_genes.txt --code integer > My_feature_table.tbl
+aln2tbl.py --fasta ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas --genes ./example/input/forward_genes.txt --code 5 > My_feature_table.tbl
 ```
 The output file is saved as plain text with tbl extension to be readily identified as a feature table. 
 
