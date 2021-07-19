@@ -38,7 +38,7 @@ chmod +x aln2tbl.py mitos2fasta.py
 
 # Dependencies
 
-This software uses Biopython and argparse modules (tested version 1.78-2). They can be installed in your system using pip:
+This software uses Biopython and argparse modules in python 3 (tested version 1.78-2). They can be installed in your system using pip:
 
 ```
 pip install biopython argparse
