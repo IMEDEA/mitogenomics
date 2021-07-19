@@ -48,8 +48,6 @@ pip install biopython
 
 **USAGE:**
 
-Simply copy the script to your executable path and use it as follows
-
 ```
 mitos2fasta.py -m My_mitogenome_sequence.fas -g My_mitos2_genes.fas -c Y > My_assembly.fas
 ```
@@ -62,11 +60,18 @@ mitos2fasta.py -m My_mitogenome_sequence.fas -g My_mitos2_genes.fas -c Y > My_as
 
 **-c CONVERTFILE, --convertfile** -> Gene names (fasta headers) from MITOS2 will be simplified and made compliant with aln2tbl. Yes=Y No=N
 
-Example:
+Example for genes with curated sequences and sanitized header names:
 
 ```
-mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/input/Hyalella_solida2319A_genes_manually_curated.fas -c Y > Hyalella_solida2319A_assembly.fas
+mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/input/Hyalella_solida2319A_genes_manually_curated.fas -c N > Hyalella_solida2319A_assembly_manually_curated.fas
 ```
+
+Example using the direct output gene annotation from mitos2 (e.g. not manually curated 5' and 3' genes and ):
+
+```
+mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/output/Hyalella_solida2319A_genes_mitos2_output.fas -c Y > Hyalella_solida2319A_assembly.fas
+```
+
 
 # aln2tbl.py
 
