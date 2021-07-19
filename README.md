@@ -49,7 +49,7 @@ pip install biopython
 **USAGE:**
 
 ```
-mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/output/Hyalella_solida2319A_genes_mitos2_output.fas -c Y > Hyalella_solida2319A_assembly.fas
+mitos2fasta.py -m mitofile.fas -g genesfile.fas -c Y > assembly.fas
 ```
 
 **PARAMETERS:**
