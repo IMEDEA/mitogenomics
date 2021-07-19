@@ -46,15 +46,25 @@ pip install biopython
 
 # mitos2fasta.py
 
+
+**DESCRIPTION:**
+
+Description: align (map) genes to mitogenome sequence to build an assembly.
+
+Type on terminal mitos2fasta.py -h for further information.
+
+People wishing to contribute to the software, report issues or seek support can contact Joan Pons at jpons@imedea.uib-csic.es
+
+
 **USAGE:**
 
 ```
-mitos2fasta.py -m mitofile.fas -g genesfile.fas -c Y > assembly.fas
+mitos2fasta.py -m mitogenome_file.fas -g genes_file.fas -c Y > assembly_file.fas
 ```
 
 **PARAMETERS:**
 
-**-m MITOFILE --mitofile** -> Input file with Mitogenome sequence in fasta format, as submitted to MITOS2
+**-m MITOFILE --mitofile** -> Input file with mitogenome sequence in fasta format, as submitted to MITOS2
 
 **-g GENESFILE, --genesfile** -> Input file with MITOS2 output with individual genes in fasta format
 
@@ -75,9 +85,15 @@ mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mito
 
 # aln2tbl.py
 
+**DESCRIPTION:**
+
+Convert an assembly in fasta format into a feature table format.
+
 This python script was designed for those modifying manually the genes mapped on the mitochondrial genome sequence and then
 automatically generate a new table fatures with updated 5' and 3' ends. It's a perfect tool to correct annotations from MITOS2
 and other similar software.
+
+Type on terminal aln2tbl.py -h for further information.
 
 People wishing to contribute to the software, report issues or seek support can contact Joan Pons at jpons@imedea.uib-csic.es
 
@@ -86,7 +102,7 @@ People wishing to contribute to the software, report issues or seek support can 
 Simply copy the script to your executable path and use it as follows
 
 ```
-aln2tbl.py --fasta ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas --genes ./example/input/forward_genes.txt --code 5 > My_feature_table.tbl
+aln2tbl.py -f assembly_file.fas -g forward_genes_file.txt -c number_genetic_code > feature_table_file.tbl
 ```
 
 **PARAMETERS:**
@@ -229,6 +245,20 @@ This occurrence must be manually annotated in the feature table.
 
 # Full pipeline example (example files in /example/)
 
+**Input files are provided in the .../mitogenomics/example/input folder**
+
+Hyalella_solida_mitogenome.fas		Mitogenome sequence in fasta format
+
+Hyalella_solida_genes_mitos2.fas		MITOS2 output, automatic annotation of the genome.
+
+Hyalella_solida_assembly_manually_curated.fas		MITOS2 output manually curated in an alignment editor (SeaView or Aliview). In this example, duplicated genes have been removed or merged, the boundaries of some genes have been corrected and names of gene names have been made compliant (see FAQs)
+
+forward_genes.txt		List of genes in forward orientation
+
+submission_template.sbt		Submission information created using the NCBI web function at https://submit.ncbi.nlm.nih.gov/genbank/template/submission/
+
+**Pipeline steps**
+
 1) Send mitogenome sequence "/example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fasta" to MITOS2
 (http://mitos2.bioinf.uni-leipzig.de/index.py)
 
@@ -237,27 +267,45 @@ This occurrence must be manually annotated in the feature table.
 
 2) From MITOS2 output download fasta file sequences of annotated genes (FAS file link). Rename file to "/example/output/Hyalella_solida2319A_genes_mitos2_output.fas"
 
-3) build assembly (contig) aligning/mapping genes relative to mitogenome sequence with mitos2fasta python script
+3) Maps the automatically annotated genes (e.g. file .fas from MITOS2 automatic annotation; see http://mitos2.bioinf.uni-leipzig.de/index.py) to the mitogenome to produce a fasta assembly with mitos2fasta python script
+
 ```
-./mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/output/Hyalella_solida2319A_genes_mitos2_output.fas -c Y > Hyalella_solida2319A_assembly.fas
+mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes.fas -c Y > Hyalella_solida_assembly.fas
 ```
+This same file/step can be produced using alternative strategies (e.g. bowtie) or manually.
 
 4) If necessary (generally it is so) manually check and modify 5' and 3' ends of genes and add control regions in Seaview or AliView as we did manually.
+
 "/example/output/Hyalella_solida2319A_assembly_manually_curated.fas"
 
-5) build feature table file with aln2tbl python script
+5) Creates feature table file with aln2tbl python script from the manually curated fasta assembly.
 
 ```
-./aln2tbl.py -f ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > Hyalella_solida2319A.tbl
+aln2tbl.py -f ./example/input/Hyalella_solida_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > Hyalella_solida_feature_table.tbl
 ```
 
 6) build .sqn file to submit annotated mitogenome to GenBank/ENA and check/validade for errors
 ```
-tbl2asn -i ./example/input/Hyalella_solida2319A_linear_tbl2asn_input.fas -f ./example/output/Hyalella_solida2319A.tbl -t ./example/input/template.sbt -a s -V vb -T
+tbl2asn -i ./example/input/Hyalella_solida_mitogenome.fas -f ./example/input/Hyalella_solida_feature_table.tbl -t ./example/input/submission_template.sbt -a s -V bv -T -j "[mgcode=5] [location=mitochondrion] [organism=Hyalella solida]"
 ```
-	compare your output files with our output files:
-				file in GenBank format "./example/output/Hyalella_solida2319A_linear_tbl2asn_input.gbf"
-				file in sqn format to submit to GenBank (or others repositories such as ENA and DDBJ)  "./example/output/Hyalella_solida2319A_linear_tbl2asn_input.sqn"
-				file with ERROR and WARNING "./example/output/Hyalella_solida2319A_linear_tbl2asn_input.val"
-				file with ERRORS "./example/output/errorsummary.val"
 
+Submission files are created using the NCBI tbl2asn script. This last commands assumes the tbl2asn script is correctly installed in the system. Please check the NCBI website for additional infromation on tbl2asn https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/
+
+Source modifiers (organism, genetic code, ...), here provided to tbl2asn using the -j option, can be alternatively specified in the header of the genome fasta. For further information about source qualifiers (-j) see: https://www.ncbi.nlm.nih.gov/genbank/mods_fastadefline/
+
+
+**Output files are provided in the .../mitogenomics/example/output folder**
+
+after running the commands, folder .../mitogenomics/example/input will contain 6 additional output files. These same files are provided in folder .../mitogenomics/example/output for comparison.
+                       
+Hyalella_solida_assembly.fas		Genes mapped over the genome, in fasta format. This file can be edited using an alignment editor for manual curation of annotations. Sample manual curation is here provided as input file Hyalella_solida_assembly_manually_curated.fas.    
+ 
+Hyalella_solida_feature_table.tbl		Feature table with gene annotations.        
+
+Hyalella_solida_mitogenome.val		Validation output, should contain no (major) error.
+
+errorsummary.val		Validation output, should contain no (major) error.
+
+Hyalella_solida_mitogenome.sqn		Annotation of the mitogenome, ready for submission.
+
+Hyalella_solida_mitogenome.gbf		Human readable version of the submission file, in GenBank format.
