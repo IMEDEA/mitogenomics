@@ -58,9 +58,9 @@ People wishing to contribute to the software, report issues or seek support can 
 
 **USAGE:**
 
-```
-mitos2fasta.py -m mitogenome_file.fas -g genes_file.fas -c Y > assembly_file.fas
-```
+
+**mitos2fasta.py -m mitofile.fas -g genesfile.fas -c covertfile_Y/N > assembly.fas**
+
 
 **PARAMETERS:**
 
@@ -70,16 +70,8 @@ mitos2fasta.py -m mitogenome_file.fas -g genes_file.fas -c Y > assembly_file.fas
 
 **-c CONVERTFILE, --convertfile** -> Gene names (fasta headers) from MITOS2 will be simplified and made compliant with aln2tbl. Yes=Y No=N
 
-Example for genes with curated sequences and sanitized header names:
-
 ```
-mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/input/Hyalella_solida2319A_genes_manually_curated.fas -c N > Hyalella_solida2319A_assembly_manually_curated.fas
-```
-
-Example using the direct output gene annotation from mitos2 (e.g. not manually curated 5' and 3' genes and ):
-
-```
-mitos2fasta.py -m ./example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fas -g ./example/output/Hyalella_solida2319A_genes_mitos2_output.fas -c Y > Hyalella_solida2319A_assembly.fas
+./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/output/Hyalella_solida_genes_mitos2.fas -c Y > Hyalella_solida_assembly.fas
 ```
 
 
@@ -101,34 +93,34 @@ People wishing to contribute to the software, report issues or seek support can 
 
 Simply copy the script to your executable path and use it as follows
 
-```
-aln2tbl.py -f assembly_file.fas -g forward_genes_file.txt -c number_genetic_code > feature_table_file.tbl
-```
+
+**aln2tbl.py -f assembly_file.fas -g forward_genes_file.txt -c number_genetic_code > feature_table_file.tbl**
+
 
 **PARAMETERS:**
 
-**-f, --fasta** -> input text file with assembly in fasta format: example file in /example/output/Hyalella_solida2319A_assembly_manually_curated.fas
+**-f, --fasta** -> input text file with assembly in fasta format
 
-**-g, --genes** -> input text file with list of gene names coded in forward strand (plus or positive strand) in a single line and separated by commas: example file in /example/input/forward_genes.txt
+**-g, --genes** -> input text file with list of gene names coded in forward strand (plus or positive strand) in a single line and separated by commas.
 
 **-c, --code** -> Number (integer) of the appropriate mitochondrial Genetic Code Translation Table: vertebrate (2), yeast (3), mold, protozoan and coelenterate (4), invertebrate (5), echinoderm and flatworm (9), ascidian (13)
 
-EXPLANATION: The aln2table.py script takes as input
+**PARAMETERS EXPLANATION:**
 
-**-f**	A fasta alignment (contig or assembly) file (--fasta) including the complete nucleotide sequence of the mitogenome
+**-f** -> A fasta alignment (contig or assembly) file (--fasta) including the complete nucleotide sequence of the mitogenome
 as well as the sequence of each mapped gene (generally 37), with a single line per gene sequence.
 
-	See example in /example/output/Hyalella_solida2319A_assembly_manually_curated.fas
+ -> See example in /example/input/Hyalella_solida_assembly_manually_curated.fas
 
 See FAQs for the correct naming of genes.
 
-**-g**	A plain text file (--genes) listing genes that are encoded in forward orientation with respect to the sequence being submitted, separated by commas and without spaces.
+**-g** -> A plain text file (--genes) listing genes that are encoded in forward orientation with respect to the sequence being submitted, separated by commas and without spaces.
 This information allows the script to correctly reverse/complement the nucleotide sequence of genes encoded on the opposite strand prior to annotation.
 Control regions, if any (see FAQs below), should be also included in the gene file (--genes), since they are generally annotated in forward orientation.
 
-	See example file in /example/input/forward_genes.txt
+ -> See example file in /example/input/forward_genes.txt
 
-**-c**	The last argument (--code) parses the number of the appropriated mitochondrial genetic code
+**-c** -> The last argument (--code) parses the number of the appropriated mitochondrial genetic code
 (e.g. 2 for vertebrate mitochondrial code, 5 for invertebrate mitochondrial code).
 
 Visit this web page for a complete list of genetic codes https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
@@ -137,79 +129,79 @@ See FAQs below for a summary of start and stop codons of different mitochondrial
 **The example script can be run using the following example:**
 
 ```
-aln2tbl.py --fasta ./example/output/Hyalella_solida2319A_assembly_manually_curated.fas --genes ./example/input/forward_genes.txt --code 5 > My_feature_table.tbl
+./aln2tbl.py -f ./example/input/Hyalella_solida_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > Hyalella_solida_feature_table.tbl
 ```
 The output file is saved as plain text with tbl extension to be readily identified as a feature table. 
 
-Compare My_feature_table.tbl with our output file /example/output/Hyalella_solida2319A.tbl
+Compare Hyalella_solida_.tbl with our output file /example/output/Hyalella_solida_feature_table.tbl
 
 
 # Full pipeline example (example files in /example/)
 
-**Input files are provided in the .../mitogenomics/example/input folder**
+**Input files are provided in the ~/mitogenomics/example/input folder**
 
-Hyalella_solida_mitogenome.fas		Mitogenome sequence in fasta format
+Hyalella_solida_mitogenome.fas -> Mitogenome sequence in fasta format
 
-Hyalella_solida_genes_mitos2.fas		MITOS2 output, automatic annotation of the genome.
+Hyalella_solida_genes_mitos2.fas -> MITOS2 output, automatic annotation of the genome.
 
-Hyalella_solida_assembly_manually_curated.fas		MITOS2 output manually curated in an alignment editor (SeaView or Aliview). In this example, duplicated genes have been removed or merged, the boundaries of some genes have been corrected and names of gene names have been made compliant (see FAQs)
+Hyalella_solida_assembly_manually_curated.fas -> MITOS2 output manually curated in an alignment editor (SeaView or Aliview). In this example, duplicated genes have been removed or merged, the boundaries of some genes have been corrected and names of gene names have been made compliant (see FAQs)
 
-forward_genes.txt		List of genes in forward orientation
+forward_genes.txt -> List of genes in forward orientation
 
-submission_template.sbt		Submission information created using the NCBI web function at https://submit.ncbi.nlm.nih.gov/genbank/template/submission/
+submission_template.sbt -> Submission information created using the NCBI web function at https://submit.ncbi.nlm.nih.gov/genbank/template/submission/
 
 **Pipeline steps**
 
-1) Send mitogenome sequence "/example/input/Hyalella_solida2319A_mitogenome_reference_mitos2_input.fasta" to MITOS2
+1) Send mitogenome sequence "/example/input/Hyalella_solida_mitogenome.fas" to MITOS2
 (http://mitos2.bioinf.uni-leipzig.de/index.py)
 
-	Select correct genetic code (Invertebrate for this example) and in advanced setting unselect OH, OL, and intron features.
-	Also unselect circular since this example is not a complete mitogenome as we failed to sequence part of control region. 
+Select correct genetic code (Invertebrate for this example) and in advanced setting unselect OH, OL, and intron features.
+Also unselect circular since this example is not a complete mitogenome as we failed to sequence part of control region. 
 
-2) From MITOS2 output download fasta file sequences of annotated genes (FAS file link). Rename file to "/example/output/Hyalella_solida2319A_genes_mitos2_output.fas"
+2) From MITOS2 output download fasta file sequences of annotated genes (FAS file link). Rename file to "Hyalella_solida_genes_mitos2.fas"
 
 3) Maps the automatically annotated genes (e.g. file .fas from MITOS2 automatic annotation; see http://mitos2.bioinf.uni-leipzig.de/index.py) to the mitogenome to produce a fasta assembly with mitos2fasta python script
 
 ```
-mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes.fas -c Y > Hyalella_solida_assembly.fas
+./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes.fas -c Y > Hyalella_solida_assembly.fas
 ```
 This same file/step can be produced using alternative strategies (e.g. bowtie) or manually.
 
-4) If necessary (generally it is so) manually check and modify 5' and 3' ends of genes and add control regions in Seaview or AliView as we did manually.
+4) If necessary (generally it is so) manually check and modify 5' and 3' ends of genes and annotate and add control regions in Seaview or AliView as we did manually. Our curated files is in:
 
-"/example/output/Hyalella_solida2319A_assembly_manually_curated.fas"
+"/example/input/Hyalella_solida_assembly_manually_curated.fas"
 
 5) Creates feature table file with aln2tbl python script from the manually curated fasta assembly.
 
 ```
-aln2tbl.py -f ./example/input/Hyalella_solida_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > Hyalella_solida_feature_table.tbl
+./aln2tbl.py -f ./example/input/Hyalella_solida_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > Hyalella_solida_feature_table.tbl
 ```
 
 6) build .sqn file to submit annotated mitogenome to GenBank/ENA and check/validade for errors
 ```
-tbl2asn -i ./example/input/Hyalella_solida_mitogenome.fas -f ./example/input/Hyalella_solida_feature_table.tbl -t ./example/input/submission_template.sbt -a s -V bv -T -j "[mgcode=5] [location=mitochondrion] [organism=Hyalella solida]"
+tbl2asn -i ./example/input/Hyalella_solida_mitogenome.fas -f ./example/output/Hyalella_solida_feature_table.tbl -t ./example/input/submission_template.sbt -a s -V bv -T -j "[mgcode=5] [location=mitochondrion] [organism=Hyalella solida]"
 ```
 
-Submission files are created using the NCBI tbl2asn script. This last commands assumes the tbl2asn script is correctly installed in the system. Please check the NCBI website for additional infromation on tbl2asn https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/
+Submission files are created using the NCBI tbl2asn script. This last commands assumes the tbl2asn script is correctly installed in your system. Please check the NCBI website for additional infromation on tbl2asn https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/
 
 Source modifiers (organism, genetic code, ...), here provided to tbl2asn using the -j option, can be alternatively specified in the header of the genome fasta. For further information about source qualifiers (-j) see: https://www.ncbi.nlm.nih.gov/genbank/mods_fastadefline/
 
 
-**Output files are provided in the .../mitogenomics/example/output folder**
+**Output files are provided in the ~/mitogenomics/example/output folder**
 
-after running the commands, folder .../mitogenomics/example/input will contain 6 additional output files. These same files are provided in folder .../mitogenomics/example/output for comparison.
+after running the commands, mitogenomics folder will contain 6 additional output files. These same files are provided in folder ~/mitogenomics/example/output for comparison.
                        
-Hyalella_solida_assembly.fas		Genes mapped over the genome, in fasta format. This file can be edited using an alignment editor for manual curation of annotations. Sample manual curation is here provided as input file Hyalella_solida_assembly_manually_curated.fas.    
+Hyalella_solida_assembly.fas -> Genes mapped over the genome, in fasta format. This file can be edited using an alignment editor for manual curation of annotations. Sample manual curation is here provided as input file Hyalella_solida_assembly_manually_curated.fas.    
  
-Hyalella_solida_feature_table.tbl		Feature table with gene annotations.        
+Hyalella_solida_feature_table.tbl -> Feature table with gene annotations.        
 
-Hyalella_solida_mitogenome.val		Validation output, should contain no (major) error.
+Hyalella_solida_mitogenome.val -> Validation output, should contain no (major) error.
 
-errorsummary.val		Validation output, should contain no (major) error.
+errorsummary.val -> Validation output, should contain no (major) error.
 
-Hyalella_solida_mitogenome.sqn		Annotation of the mitogenome, ready for submission.
+Hyalella_solida_mitogenome.sqn -> Annotation of the mitogenome, ready for submission.
 
-Hyalella_solida_mitogenome.gbf		Human readable version of the submission file, in GenBank format.
+Hyalella_solida_mitogenome.gbf -> Human readable version of the submission file, in GenBank format.
 
 # FAQs/FAQs/FAQs/:
 
