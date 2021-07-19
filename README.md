@@ -70,6 +70,8 @@ People wishing to contribute to the software, report issues or seek support can 
 
 **-c CONVERTFILE, --convertfile** -> Gene names (fasta headers) from MITOS2 will be simplified and made compliant with aln2tbl. Yes=Y No=N
 
+Copy and paste the next example in your terminal (~/mitogenomics)
+
 ```
 ./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/output/Hyalella_solida_genes_mitos2.fas -c Y > Hyalella_solida_assembly.fas
 ```
@@ -128,6 +130,8 @@ See FAQs below for a summary of start and stop codons of different mitochondrial
 
 **The example script can be run using the following example:**
 
+Copy and paste the next example in your terminal (~/mitogenomics)
+
 ```
 ./aln2tbl.py -f ./example/input/Hyalella_solida_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > Hyalella_solida_feature_table.tbl
 ```
@@ -162,6 +166,8 @@ Also unselect circular since this example is not a complete mitogenome as we fai
 
 3) Maps the automatically annotated genes (e.g. file .fas from MITOS2 automatic annotation; see http://mitos2.bioinf.uni-leipzig.de/index.py) to the mitogenome to produce a fasta assembly with mitos2fasta python script
 
+Copy and paste the next example in your terminal (~/mitogenomics)
+
 ```
 ./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes.fas -c Y > Hyalella_solida_assembly.fas
 ```
@@ -173,11 +179,16 @@ This same file/step can be produced using alternative strategies (e.g. bowtie) o
 
 5) Creates feature table file with aln2tbl python script from the manually curated fasta assembly.
 
+Copy and paste the next example in your terminal (~/mitogenomics)
+
 ```
 ./aln2tbl.py -f ./example/input/Hyalella_solida_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > Hyalella_solida_feature_table.tbl
 ```
 
 6) build .sqn file to submit annotated mitogenome to GenBank/ENA and check/validade for errors
+
+Copy and paste the next example in your terminal (~/mitogenomics)
+
 ```
 tbl2asn -i ./example/input/Hyalella_solida_mitogenome.fas -f ./example/output/Hyalella_solida_feature_table.tbl -t ./example/input/submission_template.sbt -a s -V bv -T -j "[mgcode=5] [location=mitochondrion] [organism=Hyalella solida]"
 ```
