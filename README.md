@@ -169,7 +169,7 @@ Also unselect circular since this example is not a complete mitogenome as we fai
 Copy and paste the next example in your terminal (~/mitogenomics)
 
 ```
-./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes.fas -c Y > Hyalella_solida_assembly.fas
+./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes_mitos2.fas -c Y > Hyalella_solida_assembly.fas
 ```
 This same file/step can be produced using alternative strategies (e.g. bowtie) or manually.
 
