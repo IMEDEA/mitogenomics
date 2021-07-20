@@ -199,11 +199,13 @@ Submission files are created using the NCBI tbl2asn script. This last commands a
 Source modifiers (organism, genetic code, ...), here provided to tbl2asn using the -j option, can be alternatively specified in the header of the genome fasta. For further information about source qualifiers (-j) see: https://www.ncbi.nlm.nih.gov/genbank/mods_fastadefline/
 
 
-**Output files are provided in the ~/mitogenomics/example/output folder**
+**Output files comparison**
 
-after running the commands, mitogenomics folder will contain 6 additional output files. These same files are provided in folder ~/mitogenomics/example/output for comparison.
-                       
-Hyalella_solida_assembly.fas -> Genes mapped over the genome, in fasta format. This file can be edited using an alignment editor for manual curation of annotations. Sample manual curation is here provided as input file Hyalella_solida_assembly_manually_curated.fas.    
+After running full pipeline commands, 6 additional output files will be found in ~/mitogenomics/example/input folder. 
+
+These same files are provided in folder ~/mitogenomics/example/output for comparison.
+
+Hyalella_solida_assembly.fas -> Genes mapped over the genome, in fasta format. This file can be edited using an alignment editor for manual curation of annotations. Sample manual curation is here provided as input file Hyalella_solida_assembly_manually_curated.fas. 
  
 Hyalella_solida_feature_table.tbl -> Feature table with gene annotations.        
 
