@@ -59,7 +59,7 @@ People wishing to contribute to the software, report issues or seek support can 
 **USAGE:**
 
 
-**mitos2fasta.py -m mitofile.fas -g genesfile.fas -c covertfile_Y/N > assembly.fas**
+**mitos2fasta.py -m mitofile.fas -g genesfile.fas -c convertfile_Y/N > assembly.fas**
 
 
 **PARAMETERS:**
@@ -72,8 +72,8 @@ People wishing to contribute to the software, report issues or seek support can 
 
 Copy and paste the next example in your terminal (~/mitogenomics)
 
-```
-./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/output/Hyalella_solida_genes_mitos2.fas -c Y > Hyalella_solida_assembly.fas
+``
+./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes_mitos2.fas -c Y > ./example/input/Hyalella_solida_assembly.fas
 ```
 
 
@@ -133,8 +133,9 @@ See FAQs below for a summary of start and stop codons of different mitochondrial
 Copy and paste the next example in your terminal (~/mitogenomics)
 
 ```
-./aln2tbl.py -f ./example/input/Hyalella_solida_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > Hyalella_solida_feature_table.tbl
+./aln2tbl.py -f ./example/input/Hyalella_solida_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > ./example/input/Hyalella_solida_feature_table.tbl
 ```
+
 The output file is saved as plain text with tbl extension to be readily identified as a feature table. 
 
 Compare your Hyalella_solida_feature_table.tbl with our output file /example/output/Hyalella_solida_feature_table.tbl
@@ -169,7 +170,7 @@ Also unselect circular since this example is not a complete mitogenome as we fai
 Copy and paste the next example in your terminal (~/mitogenomics)
 
 ```
-./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes_mitos2.fas -c Y > Hyalella_solida_assembly.fas
+./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes_mitos2.fas -c Y > ./example/input/Hyalella_solida_assembly.fas
 ```
 This same file/step can be produced using alternative strategies (e.g. bowtie) or manually.
 
@@ -182,7 +183,7 @@ This same file/step can be produced using alternative strategies (e.g. bowtie) o
 Copy and paste the next example in your terminal (~/mitogenomics)
 
 ```
-./aln2tbl.py -f ./example/input/Hyalella_solida_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > Hyalella_solida_feature_table.tbl
+./aln2tbl.py -f ./example/input/Hyalella_solida_assembly_manually_curated.fas -g ./example/input/forward_genes.txt -c 5 > ./example/input/Hyalella_solida_feature_table.tbl
 ```
 
 6) build .sqn file to submit annotated mitogenome to GenBank/ENA and check/validade for errors
@@ -190,7 +191,7 @@ Copy and paste the next example in your terminal (~/mitogenomics)
 Copy and paste the next example in your terminal (~/mitogenomics)
 
 ```
-tbl2asn -i ./example/input/Hyalella_solida_mitogenome.fas -f ./example/output/Hyalella_solida_feature_table.tbl -t ./example/input/submission_template.sbt -a s -V bv -T -j "[mgcode=5] [location=mitochondrion] [organism=Hyalella solida]"
+tbl2asn -i ./example/input/Hyalella_solida_mitogenome.fas -f ./example/input/Hyalella_solida_feature_table.tbl -t ./example/input/submission_template.sbt -a s -V bv -T -j "[mgcode=5] [location=mitochondrion] [organism=Hyalella solida]"
 ```
 
 Submission files are created using the NCBI tbl2asn script. This last commands assumes the tbl2asn script is correctly installed in your system. Please check the NCBI website for additional infromation on tbl2asn https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/
