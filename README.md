@@ -72,10 +72,9 @@ People wishing to contribute to the software, report issues or seek support can 
 
 Copy and paste the next example in your terminal (~/mitogenomics)
 
-``
+```
 ./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes_mitos2.fas -c Y > ./example/input/Hyalella_solida_assembly.fas
 ```
-
 
 # aln2tbl.py
 
