@@ -172,6 +172,7 @@ Copy and paste the next example in your terminal (~/mitogenomics)
 ```
 ./mitos2fasta.py -m ./example/input/Hyalella_solida_mitogenome.fas -g ./example/input/Hyalella_solida_genes_mitos2.fas -c Y > ./example/input/Hyalella_solida_assembly.fas
 ```
+
 This same file/step can be produced using alternative strategies (e.g. bowtie) or manually.
 
 4) If necessary (generally it is so) manually check and modify 5' and 3' ends of genes and annotate and add control regions in Seaview or AliView as we did manually. Our curated files is in:
