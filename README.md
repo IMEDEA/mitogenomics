@@ -221,7 +221,7 @@ Hyalella_solida_mitogenome.gbf -> Human readable version of the submission file,
 
 This script assumes the python3 interpreter to be in /usr/bin/env python3. If this is not the case, or multiple python
 installations are available, the full path to python3 interpreter can be added to the command line
-(e.g. ./usr/bin/python3 aln2tbl.py) or path exported in .bashrc file.
+(e.g. ./usr/bin/python3 aln2tbl.py or ~/miniconda3/bin/python ./aln2tbl.py) or path exported in .bashrc file.
 
 **2) How should individual genes be named in the input file?**
 
