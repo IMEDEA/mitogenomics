@@ -84,7 +84,7 @@ Convert an assembly in fasta format into a feature table format.
 
 This python script was designed for those modifying manually the genes mapped on the mitochondrial genome sequence and then
 automatically generate a new table fatures with updated 5' and 3' ends. It's a perfect tool to correct annotations from MITOS2
-and other similar software.
+and other similar software. The new table features can be used to build a sqn file to submit annotated mitogenome to any Data Bank (ENA, NCBI and DDBJ).
 
 Type on terminal aln2tbl.py -h for further information.
 
