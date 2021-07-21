@@ -88,7 +88,7 @@ and other similar software.
 
 Type on terminal aln2tbl.py -h for further information.
 
-We encourage users to run the full pipeline example (see below) on the Hyalella data provided in order to test their setup and familiarize with the commands.
+**We encourage users to run the full pipeline example (see below) on the Hyalella data provided in order to test their setup and familiarize with the commands.**
 
 People wishing to contribute to the software, report issues or seek support can contact Joan Pons at jpons@imedea.uib-csic.es
 
