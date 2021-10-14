@@ -212,10 +212,10 @@ def process(i, s, plus, fasta_sequences):
                     pass
                 if length%3 == 1 and seqrev[-1:] == "T": #If stop codon is truncated and composed of a simple base (T)
                     print("\t\t\ttransl_except\t(pos:complement({}),aa:TERM)".format(str(pos)))
-                    print("\t\t\tnote\tTAA stop codon is completed by the addition of 3' A residues to the mRNA")
+                    #print("\t\t\tnote\tTAA stop codon is completed by the addition of 3' A residues to the mRNA")
                 elif length%3 == 2 and seqrev[-2:] == "TA": #If stop codon truncated but composed of two bases (TA)
                     print("\t\t\ttransl_except\t(pos:complement({}..{}),aa:TERM)".format(str(pos), str(pos + 1)))
-                    print("\t\t\tnote\tTAA stop codon is completed by the addition of 3' A residues to the mRNA")
+                    #print("\t\t\tnote\tTAA stop codon is completed by the addition of 3' A residues to the mRNA")
                 elif length%3 == 0 and seqrev[-3:] in s:
                     pass
                 else:
